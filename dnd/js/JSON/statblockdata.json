@@ -1,0 +1,1436 @@
+{
+	"stats": [
+		{
+			"name": "fue",
+			"order": 0
+		},
+		{
+			"name": "des",
+			"order": 1
+		},
+		{
+			"name": "con",
+			"order": 2
+		},
+		{
+			"name": "int",
+			"order": 3
+		},
+		{
+			"name": "sab",
+			"order": 4
+		},
+		{
+			"name": "car",
+			"order": 5
+		}
+	],
+	"statNames": [
+		"fue",
+		"des",
+		"con",
+		"int",
+		"sab",
+		"car"
+	],
+	"allSkills": [
+		{
+			"name": "acertijos",
+			"stat": "int"
+		},
+		{
+			"name": "acrobacias",
+			"stat": "des"
+		},
+		{
+			"name": "trato con animales",
+			"stat": "sab"
+		},
+		{
+			"name": "conocimiento arcano",
+			"stat": "int"
+		},
+		{
+			"name": "atletismo",
+			"stat": "fue"
+		},
+		{
+			"name": "engaño",
+			"stat": "car"
+		},
+		{
+			"name": "historia",
+			"stat": "int"
+		},
+		{
+			"name": "perspicacia",
+			"stat": "sab"
+		},
+		{
+			"name": "intimidación",
+			"stat": "car"
+		},
+		{
+			"name": "investigación",
+			"stat": "int"
+		},
+		{
+			"name": "medicina",
+			"stat": "sab"
+		},
+		{
+			"name": "naturaleza",
+			"stat": "int"
+		},
+		{
+			"name": "percepción",
+			"stat": "sab"
+		},
+		{
+			"name": "interpretación",
+			"stat": "car"
+		},
+		{
+			"name": "persuasión",
+			"stat": "car"
+		},
+		{
+			"name": "religión",
+			"stat": "int"
+		},
+		{
+			"name": "juego de manos",
+			"stat": "des"
+		},
+		{
+			"name": "sigilo",
+			"stat": "des"
+		},
+		{
+			"name": "supervivencia",
+			"stat": "sab"
+		},
+		{
+			"name": "tradiciones",
+			"stat": "int"
+		},
+		{
+			"name": "saber",
+			"stat": "int"
+		},
+		{
+			"name": "saber de la sombra",
+			"stat": "int"
+		},
+		{
+			"name": "yog-sothotería",
+			"stat": "sab"
+		}
+	],
+	"allNormalDamageTypes": [
+		"acido",
+		"contundente",
+		"frío",
+		"fuego",
+		"fuerza",
+		"relámpago",
+		"necrótico",
+		"perforante",
+		"veneno",
+		"psíquico",
+		"radiante",
+		"cortante",
+		"trueno"
+	],
+	"allConditions": [
+		"Cegado",
+		"Hechizado",
+		"Ensordecido",
+		"cansancio",
+		"Asustado",
+		"agarrado",
+		"incapacitado",
+		"invisible",
+		"paralizado",
+		"petrificado",
+		"envenenado",
+		"derribado",
+		"apresado",
+		"Aturdido",
+		"Inconsciente"
+	],
+	"sizes": {
+		"Diminuto": {
+			"hitDie": 4
+		},
+		"Pequeño": {
+			"hitDie": 6
+		},
+		"Mediano": {
+			"hitDie": 8
+		},
+		"Grande": {
+			"hitDie": 10
+		},
+		"Enorme": {
+			"hitDie": 12
+		},
+		"Gargantuesco": {
+			"hitDie": 20
+		}
+	},
+	"types": [
+		"aberration",
+		"beast",
+		"celestial",
+		"construct",
+		"dragon",
+		"elemental",
+		"fey",
+		"fiend",
+		"giant",
+		"humanoid",
+		"monstrosity",
+		"ooze",
+		"plant",
+		"undead"
+	],
+	"crs": {
+		"0": {
+			"pe": "10",
+			"prof": 2
+		},
+		"1/8": {
+			"pe": "25",
+			"prof": 2
+		},
+		"1/4": {
+			"pe": "50",
+			"prof": 2
+		},
+		"1/2": {
+			"pe": "100",
+			"prof": 2
+		},
+		"1": {
+			"pe": "200",
+			"prof": 2
+		},
+		"2": {
+			"pe": "450",
+			"prof": 2
+		},
+		"3": {
+			"pe": "700",
+			"prof": 2
+		},
+		"4": {
+			"pe": "1,100",
+			"prof": 2
+		},
+		"5": {
+			"pe": "1,800",
+			"prof": 3
+		},
+		"6": {
+			"pe": "2,300",
+			"prof": 3
+		},
+		"7": {
+			"pe": "2,900",
+			"prof": 3
+		},
+		"8": {
+			"pe": "3,900",
+			"prof": 3
+		},
+		"9": {
+			"pe": "5,000",
+			"prof": 4
+		},
+		"10": {
+			"pe": "5,900",
+			"prof": 4
+		},
+		"11": {
+			"pe": "7,200",
+			"prof": 4
+		},
+		"12": {
+			"pe": "8,400",
+			"prof": 4
+		},
+		"13": {
+			"pe": "10,000",
+			"prof": 5
+		},
+		"14": {
+			"pe": "11,500",
+			"prof": 5
+		},
+		"15": {
+			"pe": "13,000",
+			"prof": 5
+		},
+		"16": {
+			"pe": "15,000",
+			"prof": 5
+		},
+		"17": {
+			"pe": "18,000",
+			"prof": 6
+		},
+		"18": {
+			"pe": "20,000",
+			"prof": 6
+		},
+		"19": {
+			"pe": "22,000",
+			"prof": 6
+		},
+		"20": {
+			"pe": "25,000",
+			"prof": 6
+		},
+		"21": {
+			"pe": "33,000",
+			"prof": 7
+		},
+		"22": {
+			"pe": "41,000",
+			"prof": 7
+		},
+		"23": {
+			"pe": "50,000",
+			"prof": 7
+		},
+		"24": {
+			"pe": "62,000",
+			"prof": 7
+		},
+		"25": {
+			"pe": "75,000",
+			"prof": 8
+		},
+		"26": {
+			"pe": "90,000",
+			"prof": 8
+		},
+		"27": {
+			"pe": "105,000",
+			"prof": 8
+		},
+		"28": {
+			"pe": "120,000",
+			"prof": 8
+		},
+		"29": {
+			"pe": "135,000",
+			"prof": 9
+		},
+		"30": {
+			"pe": "155,000",
+			"prof": 9
+		}
+	},
+	"armors": {
+		"none": {
+			"type": "special"
+		},
+		"armadura natural": {
+			"type": "special"
+		},
+		"armadura de mago": {
+			"type": "special"
+		},
+		"armadura acolcahada": {
+			"type": "ligera",
+			"ac": 11
+		},
+		"armadura de cuero": {
+			"type": "ligera",
+			"ac": 11
+		},
+		"cuero tachonado": {
+			"type": "ligera",
+			"ac": 12
+		},
+		"armadura de pieles": {
+			"type": "media",
+			"ac": 12
+		},
+		"camisa de malla": {
+			"type": "media",
+			"ac": 13
+		},
+		"cota de escamas": {
+			"type": "media",
+			"ac": 14
+		},
+		"coraza": {
+			"type": "media",
+			"ac": 14
+		},
+		"media armadura": {
+			"type": "media",
+			"ac": 15
+		},
+		"cota guarnecida": {
+			"type": "pesada",
+			"ac": 14
+		},
+		"cota de malla": {
+			"type": "pesada",
+			"ac": 16
+		},
+		"armadura de bandas": {
+			"type": "pesada",
+			"ac": 17
+		},
+		"armadura de placas": {
+			"type": "pesada",
+			"ac": 18
+		},
+		"otro": {
+			"type": "special"
+		}
+	},
+	"defaultPreset": {
+		"slug": "",
+		"name": "Monster",
+		"size": "Medium",
+		"type": "humanoid",
+		"subtype": "",
+		"group": null,
+		"alignment": "any alignment",
+		"armor_class": 10,
+		"armor_desc": null,
+		"hit_points": 22,
+		"hit_dice": "5d8",
+		"speed": {
+			"walk": 30
+		},
+		"strength": 10,
+		"dexterity": 10,
+		"constitution": 10,
+		"intelligence": 10,
+		"wisdom": 10,
+		"charisma": 10,
+		"strength_save": null,
+		"dexterity_save": null,
+		"constitution_save": null,
+		"intelligence_save": null,
+		"wisdom_save": null,
+		"charisma_save": null,
+		"skills": {},
+		"damage_vulnerabilities": "",
+		"damage_resistances": "",
+		"damage_immunities": "",
+		"condition_immunities": "",
+		"senses": "Percepción pasiva 10",
+		"languages": "",
+		"challenge_rating": "1",
+		"actions": "",
+		"additionalactions": "",
+		"reactions": "",
+		"legendary_actions": "",
+		"legendary_desc": "",
+		"lair_actions": "",
+		"lair_desc": "",
+		"region_actions": "",
+		"region_desc": "",
+		"mythic_actions": "",
+		"mythic_desc": "",
+		"special_abilities": "",
+		"document_slug": "systems-reference-document"
+	},
+	"attackTypes": [
+		"melee or Ataque de arma a distancia:",
+		"melee or Ataque de conjuro a distancia:",
+		"melee weapon attack:",
+		"Ataque de conjuro cuerpo a cuerpo:",
+		"Ataque de arma a distancia:",
+		"Ataque de conjuro a distancia:"
+	],
+	"commonAbilities": [
+		{
+			"name": "Select Preset",
+			"desc": null
+		},
+		{
+			"name": "",
+			"desc": null
+		},
+		{
+			"name": "Ataque con arma cuerpo a cuerpo (FUE)",
+			"realname": "",
+			"desc": "_Ataque con arma cuerpo a cuerpo:_ [FUE ATK] a impactar, alcance ??? pies, un objetivo. _Impacto:_ [FUE ???D???] de daño ???."
+		},
+		{
+			"name": "Ataque con arma cuerpo a cuerpo (DES)",
+			"realname": "",
+			"desc": "_Ataque con arma cuerpo a cuerpo:_ [DES ATK] a impactar, alcance ??? pies, un objetivo. _Impacto:_ [DES ???D???] de daño ???."
+		},
+		{
+			"name": "Ataque de conjuro cuerpo a cuerpo (INT)",
+			"realname": "",
+			"desc": "_Ataque de conjuro cuerpo a cuerpo:_ [INT ATK] a impactar, alcance ??? pies, un objetivo. _Impacto:_ [INT ???D???] de daño ???."
+		},
+		{
+			"name": "Ataque de conjuro cuerpo a cuerpo (SAB)",
+			"realname": "",
+			"desc": "_Ataque de conjuro cuerpo a cuerpo:_ [SAB ATK] a impactar, alcance ??? pies, un objetivo. _Impacto:_ [SAB ???D???] de daño ???."
+		},
+		{
+			"name": "Ataque de conjuro cuerpo a cuerpo (CAR)",
+			"realname": "",
+			"desc": "_Ataque de conjuro cuerpo a cuerpo:_ [CAR ATK] a impactar, alcance ??? pies, un objetivo. _Impacto:_ [CAR ???D???] de daño ???."
+		},
+		{
+			"name": "Ataque de arma a distancia (FUE)",
+			"realname": "",
+			"desc": "_Ataque de arma a distancia:_ [FUE ATK] a impactar, alcance ???/??? pies, un objetivo. _Impacto:_ [FUE ???D???] de daño ???."
+		},
+		{
+			"name": "Ataque de arma a distancia (DES)",
+			"realname": "",
+			"desc": "_Ataque de arma a distancia:_ [DES ATK] a impactar, alcance ???/??? pies, un objetivo. _Impacto:_ [DES ???D???] de daño ???."
+		},
+		{
+			"name": "Ataque de conjuro a distancia (INT)",
+			"realname": "",
+			"desc": "_Ataque de conjuro a distancia:_ [INT ATK] a impactar, alcance ???/??? pies, un objetivo. _Impacto:_ [INT ???D???] de daño ???."
+		},
+		{
+			"name": "Ataque de conjuro a distancia (SAB)",
+			"realname": "",
+			"desc": "_Ataque de conjuro a distancia:_ [SAB ATK] a impactar, alcance ???/??? pies, un objetivo. _Impacto:_ [SAB ???D???] de daño ???."
+		},
+		{
+			"name": "Ataque de conjuro a distancia (CAR)",
+			"realname": "",
+			"desc": "_Ataque de conjuro a distancia:_ [CAR ATK] a impactar, alcance ???/??? pies, un objetivo. _Impacto:_ [CAR ???D???] de daño ???."
+		},
+		{
+			"name": "Ataque con arma cuerpo a cuerpo o a distancia (FUE)",
+			"realname": "",
+			"desc": "_Ataque con arma cuerpo a cuerpo o a distancia:_ [FUE ATK] a impactar, alcance ??? pies o alcance ???/??? pies, un objetivo. _Impacto:_ [FUE ???D???] de daño ???."
+		},
+		{
+			"name": "Ataque con arma cuerpo a cuerpo o a distancia (DES)",
+			"realname": "",
+			"desc": "_Ataque con arma cuerpo a cuerpo o a distancia:_ [DES ATK] a impactar, alcance ??? pies o alcance ???/??? pies, un objetivo. _Impacto:_ [DES ???D???] de daño ???."
+		},
+		{
+			"name": "Ataque con conjuro cuerpo a cuerpo o a distancia (INT)",
+			"realname": "",
+			"desc": "_Ataque con conjuro cuerpo a cuerpo o a distancia:_ [INT ATK] a impactar, alcance ??? pies o alcance ???/??? pies, un objetivo. _Impacto:_ [INT ???D???] de daño ???."
+		},
+		{
+			"name": "Ataque con conjuro cuerpo a cuerpo o a distancia (SAB)",
+			"realname": "",
+			"desc": "_Ataque con conjuro cuerpo a cuerpo o a distancia:_ [SAB ATK] a impactar, alcance ??? pies o alcance ???/??? pies, un objetivo. _Impacto:_ [SAB ???D???] de daño ???."
+		},
+		{
+			"name": "Ataque con conjuro cuerpo a cuerpo o a distancia (CAR)",
+			"realname": "",
+			"desc": "_Ataque con conjuro cuerpo a cuerpo o a distancia:_ [CAR ATK] a impactar, alcance ??? pies o alcance ???/??? pies, un objetivo. _Impacto:_ [CAR ???D???] de daño ???."
+		},
+		{
+			"name": "",
+			"desc": null
+		},
+		{
+			"name": "Ataque Múltiple (Action)",
+			"realname": "Ataque múltiple",
+			"desc": "El [MON] realiza dos ataques."
+		},
+		{
+			"name": "Resistencia Legendaria",
+			"realname": "Resistencia Legendaria (3/día)",
+			"desc": "El [MON] puede elegir tener éxito en una tirada de salvación que haya fallado."
+		},
+		{
+			"name": "Lanzamiento de Conjuros (INT)",
+			"realname": "Lanzamiento de Conjuros",
+			"desc": "El [MON] es un lanzador de conjuros de nivel ???. Su aptitud mágica es Inteligencia (salvación de conjuros CD [INT SAVE], [INT ATK] a impactar con ataques de conjuro). Tiene preparados los conjuros de ??? siguientes:\n\n> Trucos (a voluntad): _spell, spell, spell, spell_\n> Nivel 1 (4 espacios): _spell, spell, spell_\n> Nivel 2 (3 espacios): _spell, spell, spell_\n> Nivel 3 (2 espacios): _spell, spell_"
+		},
+		{
+			"name": "Lanzamiento de Conjuros (SAB)",
+			"realname": "Lanzamiento de Conjuros",
+			"desc": "El [MON] es un lanzador de conjuros de nivel ???. Su aptitud mágica es Sabiduría (salvación de conjuros CD [SAB SAVE], [SAB ATK] a impactar con ataques de conjuro). Tiene preparados los conjuros de ??? siguientes:\n\n> Trucos (a voluntad): _spell, spell, spell, spell_\n> Nivel 1 (4 espacios): _spell, spell, spell_\n> Nivel 2 (3 espacios): _spell, spell, spell_\n> Nivel 3 (2 espacios): _spell, spell_"
+		},
+		{
+			"name": "Lanzamiento de Conjuros (CAR)",
+			"realname": "Lanzamiento de Conjuros",
+			"desc": "El [MON] es un lanzador de conjuros de nivel ???. Su aptitud mágica es Carisma (salvación de conjuros CD [CAR SAVE], [CAR ATK] a impactar con ataques de conjuro). Tiene preparados los conjuros de ??? siguientes:\n\n> Trucos (a voluntad): _spell, spell, spell, spell_\n> Nivel 1 (4 espacios): _spell, spell, spell_\n> Nivel 2 (3 espacios): _spell, spell, spell_\n> Nivel 3 (2 espacios): _spell, spell_"
+		},
+		{
+			"name": "Nuevo Lanzamiento de Conjuros (INT)",
+			"realname": "Lanzamiento de conjuros",
+			"desc": "El [MON] lanza uno de los siguientes conjuros, utilizando la Inteligencia como aptitud mágica (salvación de conjuros CD [INT SAVE]):\n\n> A voluntad: _spell, spell, spell, spell_\n> 3/Día cada uno: _spell, spell, spell_\n> 1/Día cada uno: _spell, spell, spell_"
+		},
+		{
+			"name": "Nuevo Lanzamiento de Conjuros (SAB)",
+			"realname": "Lanzamiento de conjuros",
+			"desc": "El [MON] lanza uno de los siguientes conjuros, utilizando la Sabiduría como aptitud mágica (salvación de conjuros CD [SAB SAVE]):\n\n> A voluntad: _spell, spell, spell, spell_\n> 3/Día cada uno: _spell, spell, spell_\n> 1/Día cada uno: _spell, spell, spell_"
+		},
+		{
+			"name": "Nuevo Lanzamiento de Conjuros (CAR)",
+			"realname": "Lanzamiento de conjuros",
+			"desc": "El [MON] lanza uno de los siguientes conjuros, utilizando el Carisma como aptitud mágica (salvación de conjuros CD [CAR SAVE]):\n\n> A voluntad: _spell, spell, spell, spell_\n> 3/Día cada uno: _spell, spell, spell_\n> 1/Día cada uno: _spell, spell, spell_"
+		},
+		{
+			"name": "Lanzamiento de Conjuros Innato (INT)",
+			"realname": "Lanzamiento de Conjuros Innato",
+			"desc": "La aptitud mágica de [MON] es Inteligencia (salvación de conjuros CD [INT SAVE], [INT ATK] a impactar con ataques de conjuro). Puede lanzar de forma innata los siguientes conjuros, sin necesidad de componentes materiales:\n\n> A voluntad: _spell, spell, spell_\n> 3/día cada uno: _spell, spell, spell_\n> 1/día cada uno: _spell, spell_"
+		},
+		{
+			"name": "Lanzamiento de Conjuros Innato (SAB)",
+			"realname": "Lanzamiento de Conjuros Innato",
+			"desc": "La aptitud mágica de [MON] es Sabiduría (salvación de conjuros CD [SAB SAVE], [SAB ATK] a impactar con ataques de conjuro). Puede lanzar de forma innata los siguientes conjuros, sin necesidad de componentes materiales:\n\n> A voluntad: _spell, spell, spell_\n> 3/día cada uno: _spell, spell, spell_\n> 1/día cada uno: _spell, spell_"
+		},
+		{
+			"name": "Lanzamiento de Conjuros Innato (CAR)",
+			"realname": "Lanzamiento de Conjuros Innato",
+			"desc": "La aptitud mágica de [MON] es Carisma (salvación de conjuros CD [CAR SAVE], [CAR ATK] a impactar con ataques de conjuro). Puede lanzar de forma innata los siguientes conjuros, sin necesidad de componentes materiales:\n\n> A voluntad: _spell, spell, spell_\n> 3/día cada uno: _spell, spell, spell_\n> 1/día cada uno: _spell, spell_"
+		},
+		{
+			"name": "",
+			"desc": null
+		},
+		{
+			"name": "Abalanzarse",
+			"desc": "Si el [MON] se mueve al menos ??? pies en línea recta hacia una criatura y después la impacta con su ataque de ??? durante el mismo turno, el objetivo recibirá [???D???] de daño de ??? adicional. Si el objetivo es una criatura, deberña superar una tirada de salvación de Fuerza CD ??? o sufrir el Estado Derribado. Si el objetivo está derribado, el [MON] puede usar una acción adicional para hacer un ataque de ??? contra él."
+		},
+		{
+			"name": "Absorber",
+			"desc": "El [MON] se mueve hasta su Velocidad. Al hacer esto puede entrar en los espacios de criaturas ??? o más pequeñas. Cada vez que entre en el espacio de otra criatura, esta deberá realizar una tirada de salvación de Destreza CD [FUE SAVE].\nSi tiene éxito, la criatura podrá elegir ser empujada 5 pies hacia atrás o hacia el lado del [MON]. Si decide no ser empujada, sufrirá las consecuencias de una tirada de salvación fallida.\nSi falla la tirada de salvación, el [MON] entrará en el espacio de la criatura, y esta sufrirá [3D6] de daño de ??? y el [MON] la absorberá. Las criaturas absorbidas no pueden respirar, están apresadas y reciben [6D6] de daño de ??? al principio de cada uno de los turnos del [MON].\nCuando el [MON] se mueve, las criaturas absorbidas se desplazan con él. Una criatura absorbida puede intentar escapar utilizando una acción para realizar una prueba de Fuerza CD [FUE SAVE]. Si tiene éxito, logrará salir y se moverá a un espacio de su elección a 5 pies o menos del [MON]."
+		},
+		{
+			"name": "Absorción de Daño",
+			"realname": "Absorción de ???",
+			"desc": "Siempre que la [MON] fuera a sufrir daño de ???, no sufrirá daño de ese tipo y, además, recuperará tantos Puntos de Golpe como el daño de ??? que fuera a recibir."
+		},
+		{
+			"name": "Acción astuta",
+			"desc": "El [MON]  puede realizar una Acción de Correr, Destrabarse o Esconderse."
+		},
+		{
+			"name": "Afortunado",
+			"desc": "Cuando el [mon] saque un 1 en el dado al hacer una Tirada d20, puede volver a tirar el dado, pero tendrá que utilizar el resultado nuevo."
+		},
+		{
+			"name": "Agilidad de Mediano",
+			"desc": "El mediano puede moverse a través del espacio que ocupa por una criatura que debe tener un Tamaño que esté, como mucho, una categoría por encima de la suya."
+		},
+		{
+			"name": "Agilidad Felina",
+			"desc": "Cuando el [MON] se mueve durante su turno en combate, puede duplicar su velocidad hasta el final del turno. Una vez haya usado este atributo, no podrá volver a utilizarlo hasta que se mueva 0 pies en uno de sus turnos."
+		},
+		{
+			"name": "Agresivo",
+			"desc": "El [MON] puede moverse hasta su Velocidad hacia una criatura hostil a la que pueda ver."
+		},
+		{
+			"name": "Aguantar la Respiración",
+			"desc": "El [MON] puede aguantar la respiración durante ???."
+		},
+		{
+			"name": "Amorfo",
+			"desc": "El [MON] puede moverse a través de espacios de tan solo 1 pulgada de ancho sin apretarse."
+		},
+		{
+			"name": "Anfibio",
+			"desc": "El [MON] puede respirar tanto dentro del agua como fuera de ella."
+		},
+		{
+			"name": "Apariencia Falsa",
+			"desc": "Mientras permanezca estático, el [MON] es indistinguible de ???."
+		},
+		{
+			"name": "Apariencia Ilusoria (Acción)",
+			"realname": "Apariencia ilusoria",
+			"desc": "La [mon] se cubre a sí misma y a todo lo que esté llevando o vistiendo con una ilusión mágica que la hace parecer cualquier otra criatura de forma humanoide de más o menos su mismo tamaño. Esta ilusión terminará si la saga muere o utiliza una acción adicional para darla por finalizada.\nLos cambios realizados por este efecto no aguantan una inspección física. Así, aunque la saga puede aparentar tener una piel tersa, alguien que la toque se dará cuenta de que esta es rugosa. Una criatura que desee inspeccionar visualmente a la [mon] deberá utilizar una acción para realizar una prueba de Inteligencia (Investigación) CD ???. Si la supera, se habrá dado cuenta del disfraz de la [mon]."
+		},
+		{
+			"name": "Apresador",
+			"desc": "El [MON] tiene Ventaja en las tiradas de ataque contra cualquier criatura a la que tenga agarrada."
+		},
+		{
+			"name": "Arma de Aliento (Cono, Acción)",
+			"realname": "Arma de Aliento (Recarga ???)",
+			"desc": "El [MON] exhala ??? en un cono de ??? pies. Todas las criaturas en el área deberán hacer una tirada de salvación de Destreza CD ???, sufriendo [???D???] de daño de ??? si la fallan, o la mitad de ese daño si la superan."
+		},
+		{
+			"name": "Arma de Aliento (Línea, Acción)",
+			"realname": "Arma de Aliento (Recarga ???)",
+			"desc": "El [MON] exhala ??? en una línea de ??? pies de largo y ??? de ancho. Todas las criaturas situadas en dicha línea deberán hacer una tirada de salvación de Destreza CD ???, sufriendo [???D???] de daño de ??? si la fallan, o la mitad de ese daño si la superan."
+		},
+		{
+			"name": "Armas Abrasadoras",
+			"desc": "Cuando el [MON] impacta con un arma cuerpo a cuerpo metálica, esta inflige [???D???] de daño de Fuego adicional (ya incluido en el ataque)."
+		},
+		{
+			"name": "Armas Angelicales",
+			"desc": "Los ataques con arma del [MON] son mágicos. Cuando el [MON] impacta con cualquier arma, este inflige [???D???] de daño Radiante (ya incluido en el ataque)."
+		},
+		{
+			"name": "Armas Infernales",
+			"desc": "Los ataques con arma del [MON] son mágicos e infligen [???D????] de Daño de Veneno adicional al impactar (ya incluido en los ataques)."
+		},
+		{
+			"name": "Armas Mágicas",
+			"desc": "Los ataques con arma de [MON] se consideran mágicos."
+		},
+		{
+			"name": "Asesinar",
+			"desc": "Durante su primer turno, el [MON] iene Ventaja en las tiradas de ataque contra cualquier criatura que aún no haya llevado a cabo su turno. Además, cualquier impacto que el [MON] realice contra una criatura sorprendida será automáticamente un crítico."
+		},
+		{
+			"name": "Astucia Gnoma",
+			"desc": "El gnomo tiene Ventaja en las tiradas de salvación de Inteligencia, Sabiduría y Carisma contra magia."
+		},
+		{
+			"name": "Atacar con las Alas (Acción Legendaria)",
+			"realname": "Atacar con las alas (cuesta 2 acciones)",
+			"desc": "El [mon] bate sus alas. Todas las criaturas que se encuentren a ??? pies o menos del [MON] deberán superar una tirada de salvación de Destreza CD ??? o recibirán [FUE ???d???] de daño Contundente y serán derribadas. Tras agitar sus alas, el [mon] puede volar hasta la mitad de su velocidad volando."
+		},
+		{
+			"name": "Atacar en Manada",
+			"desc": "El [MON] posee Ventaja en las tiradas de ataque contra criaturas que estén a 5 pies o menos de, al menos, un aliado del [MON] que no esté incapacitado."
+		},
+		{
+			"name": "Ataque (Acción Legendaria)",
+			"realname": "??? Ataque",
+			"desc": "El [MON] realiza un ataque con la ???."
+		},
+		{
+			"name": "Ataque en picado",
+			"desc": "Si el [MON] está volando, cae en picado al menos ??? pies directamente hacia un objetivo y después consigue impactarle con un ataque con arma cuerpo a cuerpo, este ataque inflige [???D???] de daño adicional al objetivo."
+		},
+		{
+			"name": "Ataque Furtivo",
+			"realname": "Ataque Furtivo (1/Turno)",
+			"desc": "Una vez por turno, el [MON] inflige [???D???] de daño adicional a un objetivo al que impacte con un ataque con arma en cuya tirada de ataque tuviera Ventaja. No necesita tener Ventaja si un aliado no incapacitado del [MON] está a 5 pies o menos del objetivo y el espía no sufre Desventaja en la tirada de ataque."
+		},
+		{
+			"name": "Ataque por sorpresa",
+			"desc": "Si el [MON] sorprende a una criatura y la impacta con un ataque durante el primer asalto del combate, ese ataque causa [3D6] de daño adicionales."
+		},
+		{
+			"name": "Ataques Salvajes",
+			"desc": "Cuando el [MON] consigue un golpe crítico con un ataque con arma cuerpo a cuerpo, puede tirar uno de los dados de daño del arma una vez adicional y añadirlo al daño adicional del golpe crítico."
+		},
+		{
+			"name": "Aura de Miedo",
+			"desc": "Si el [MON] no está incapacitado, todas las criaturas que le sean hostiles y empiecen su turno situadas a ??? pies o menos de él deberán hacer una tirada de salvación Sabiduría CD ???. Si fallan, estarán asustadas hasta el principio de tu siguiente turno. Si una criatura tiene éxito en la tirada de salvación, será inmune al Aura de Miedo del [MON] durante las próximas 24 horas."
+		},
+		{
+			"name": "Avalanzarse",
+			"desc": "Si el [mon] se mueve al menos ??? pies en línea recta hacia una criatura y luego la golpea con un ataque de ??? en el mismo turno, ese objetivo debe tener éxito en una tirada de salvación de Fuerza CD ??? o sufrirá el Estado Derribado. Si el objetivo queda Derribado, el [mon] puede realizar un ataque de ??? contra él como Acción Adicional."
+		},
+		{
+			"name": "Aversión al Daño",
+			"realname": "Aversión al ???",
+			"desc": "Si el [MON] recibe daño ???, tendrá Desventaja en las tiradas de ataque y las pruebas de característica hasta el final de su siguiente turno."
+		},
+		{
+			"name": "Berserk",
+			"desc": "Si el [MON] empieza su turno con ??? Puntos de Golpe o menos, tira un d6. Si sacas un 6, el [MON] se ve poseído por una furia berserk. Durante cada uno de los turnos que pase en este estado, el [MON] atacará a la criatura más cercana que pueda ver. Si no hay ninguna criatura lo bastante próxima como para que se mueva hasta ella y la ataque, el [MON] atacará a un objeto, dando preferencia a los que son más pequeños que él. Una vez el [MON] ha entrado en estado berserk, seguirá bajo sus efectos hasta que sea destruido o recupere todos sus Puntos de Golpe."
+		},
+		{
+			"name": "Bestia de Carga",
+			"desc": "El [MON] es considerada un animal ??? en lo que su capacidad de carga respecta"
+		},
+		{
+			"name": "Bruto",
+			"desc": "Las armas cuerpo a cuerpo infligen un dado adicional de su daño cuando el [MON] impacta con ellas (ya incluido en el ataque)."
+		},
+		{
+			"name": "Cabezas Reactivas",
+			"desc": "La [mon] obtiene una reacción más, que solo puede usar para realizar ataques de oportunidad, por cada cabeza por encima de la primera que posea."
+		},
+		{
+			"name": "Cambiaformas",
+			"desc": "El [MON] puede usar su acción para polimorfarse en un ???, o de vuelta a su aspecto auténtico. Su perfil, con la excepción del tamaño, es el mismo en todas las formas. Cualquier elemento de equipo que lleve o vista no se transformará. Si muere, volverá a su forma auténtica."
+		},
+		{
+			"name": "Cambiaformas (Licántropo)",
+			"realname": "Cambiaformas",
+			"desc": "El [MON] puede usar su acción para polimorfarse en un híbrido humanoide-??? o en un ???, o de vuelta a su aspecto auténtico, que es el de un humanoide. Su perfil, con la excepción de la CA, es el mismo en todas las formas. Cualquier elemento de equipo que lleve o vista no se transformará. Si muere, volverá a su forma auténtica."
+		},
+		{
+			"name": "Cambiar de forma (Dragon, Action)",
+			"realname": "Cambiar de forma",
+			"desc": "El [mon] se transforma mágicamente en un humanoide o bestia con un valor de desafío que no sea mayor al suyo propio, o de vuelta a su forma original. Si muere, retornará a su aspecto auténtico. Cualquier equipo que vista o lleve será absorbido por la nueva forma o portado por esta, a elección del [mon].\nMientras asuma su nueva forma, el [mon] mantendrá su alineamiento, Puntos de Golpe, Dados de Golpe, capacidad para hablar, competencias, Resistencia Legendaria, acciones en guarida y puntuaciones de Inteligencia, Sabiduría y Carisma, así como esta acción. El resto de su perfil y capacidades son reemplazadas por las de la nueva forma, aunque no obtiene ni los rasgos de clase ni las acciones legendarias de esta."
+		},
+		{
+			"name": "Cambiar de forma (Humanoide, Acción)",
+			"realname": "Cambiar de forma",
+			"desc": "El [MON] se transforma mágicamente en un humanoide Pequeño o más grande, o de vuelta a su aspecto auténtico. Su perfil es el mismo en todas las formas. Cualquier elemento de equipo que lleve o vista no se transformará. Si muere, volverá a su forma auténtica."
+		},
+		{
+			"name": "Caminar por el Hielo",
+			"desc": "El [MON] puede moverse y trepar por superfícies heladas sin tener que hacer pruebas de característica. Además, desplazarse por Terreno Difícil compuesto de nieve o hielo no le cuesta movimiento adicional."
+		},
+		{
+			"name": "Caminar por Telarañas",
+			"desc": "La [MON] ignora todas las restricciones al movimiento causadas por cualquier tipo de red o telaraña."
+		},
+		{
+			"name": "Camuflarse",
+			"realname": "Camuflarse en ???",
+			"desc": "El [MON] tiene Ventaja en las pruebas de Destreza (Sigilo) para esconderse en terrenos ???."
+		},
+		{
+			"name": "Caparazón Reflectante",
+			"desc": "Cada vez que la [mon] sea el objetivo de un proyectil mágico o de un conjuro cuya área sea una línea o que requiera una tirada de ataque, tira un d6. Con un resultado de 1 a 5, la [mon] no será afectada. Con un 6, la [mon] tampoco será afectada, pero, además, el conjuro será reflejado contra su lanzador, como si tuviera su origen en la [mon], convirtiendo al lanzador en objetivo."
+		},
+		{
+			"name": "Carga",
+			"desc": "Si el [MON] se mueve al menos ??? pies en línea recta hacia un objetivo y después le impacta con su ataque de ??? durante el mismo turno, el objetivo recibe [???D???] de daño ??? adicional. Si el objetivo es una criatura, deberá superar una tirada de salvación de Fuerza CD ??? o sufrirá el Estado Derribado."
+		},
+		{
+			"name": "Carga Pisoteadora",
+			"desc": "Si el [MON] se mueve al menos ??? pies en línea recta hacia una criatura y después la impacta con su ataque de ??? durante el mismo turno, el objetivo recibirá [???D???] de daño de ??? adicional. Si el objetivo es una criatura deberá superar una tirada de salvación de Fuerza CD ??? o sufrirá el Estado Derribado. Si el objetivo está Derribado, el [MON] puede usar una Acción Adicional para hacer un ataque de ??? contra él."
+		},
+		{
+			"name": "Constreñir (Acción)",
+			"realname": "Constreñir",
+			"desc": "_Ataque con arma cuerpo a cuerpo:_ [FUE ATK] a impactar, alcance 5 pies, una criatura _Impacto:_ [FUE ???D???] de daño Contundente, y el objetivo está Agarrado (CD ??? para escapar). Hasta que el agarre finalice, la criatura también sufre el Estado Apresado, y el [MON] no podrá constreñir a otro objetivo."
+		},
+		{
+			"name": "Consumir vida (Acción)",
+			"realname": "Consumir vida",
+			"desc": "_Ataque de conjuro cuerpo a cuerpo:_ +??? a impactar, alcance ??? pies, una criatura _Impacto:_ [???D??? + ???] de Necrótico. El objetivo debe superar una tirada de salvación de Constitución CD ??? o sus Puntos de Golpe máximos se reducirán en la cantidad de daño recibida. Esta reducción permanecerá hasta que la criatura finalice un Descanso Largo. Si este ataque reduce sus Puntos de Golpe máximos a 0, morirá."
+		},
+		{
+			"name": "Corroer Metal",
+			"desc": "Cualquier arma no mágica hecha de metal que entre en contacto con el [MON] se corroerá. Tras causar daño, el arma sufrirá un penalizador de -1 permanente y acumulativo a las tiradas de daño. Si este penalizador llega a ser de -5, el arma será destruida. Además, la munición no mágica hecha de metal que impacte al [MON] es destruida tras causar su daño."
+		},
+		{
+			"name": "Cuerpo Abrasador",
+			"desc": "Cualquier criatura que toque al [MON] o le impacte con un ataque cuerpo a cuerpo estando a ??? pies o menos de distancia recibirá [???D???] de daño de Fuego."
+		},
+		{
+			"name": "Desafiar la Expulsión",
+			"desc": "El [mon] y todos los [mons] que se encuentren a 30 pies o menos de él tienen Ventaja en las tiradas de salvación contra efectos que expulsan muertos vivientes."
+		},
+		{
+			"name": "Deslizarse por la Tierra",
+			"desc": "El [MON] puede excavar a través de la tierra y la piedra que no sean mágicas ni estén trabajadas. Al hacer esto no desplaza o perturba el material a través del que se mueve."
+		},
+		{
+			"name": "Detectar (Acción Legendaria)",
+			"realname": "Detectar",
+			"desc": "El [MON] realiza una prueba de Sabiduría (Percepción)."
+		},
+		{
+			"name": "Devoción Oscura",
+			"desc": "El [mon] tiene Ventaja en las tiradas de salvación para evitar los Estados Asustado o Hechizado."
+		},
+		{
+			"name": "Dividirse (Reacción)",
+			"realname": "Dividirse",
+			"desc": "Cuando una [MON] Mediana o más grande que tenga al menos 10 Puntos de Golpe reciba daño de relámpago o Cortante, se dividirá en dos nuevas [MON]. Cada una de ellas tendrá la mitad de Puntos de Golpe, redondeando hacia abajo, y será una categoría de tamaño más pequeñas que la original."
+		},
+		{
+			"name": "Dos Cabezas",
+			"desc": "El [MON] tiene Ventaja en las pruebas de Sabiduría (Percepción) y en las tiradas de salvación para evitar los Estados Asustado, Aturdido, Cegado, Ensordecido, Hechizado o dejado Inconsciente."
+		},
+		{
+			"name": "Ecolocalización",
+			"desc": "El [MON] perderá su visión ciega si está Ensordecido."
+		},
+		{
+			"name": "Efímero",
+			"desc": "El [mon] no puede vestir o llevar nada."
+		},
+		{
+			"name": "Emboscador",
+			"desc": "Durante el primer asalto de un combate, el [MON] tiene Ventaja en las tiradas de ataque contra cualquier criatura a la que haya sorprendido."
+		},
+		{
+			"name": "Engullir",
+			"desc": "El [MON] realiza un ataque de Mordisco contra una criatura ??? o más pequeña a la que esté Agarrando. Si el ataque impacta, la criatura recibirá daño del Mordisco y será engullida, finalizando el agarre. Una criatura engullida sufre los Estados Apresado y Cegado, tiene Cobertura Total contra ataques y otros efectos que se originen en el exterior del [MON] y recibe [???D???] de daño de Ácido al comienzo de cada uno de los turnos del [MON]. Si el [MON] recibe ??? o más de daño durante un mismo turno de una criatura que se encuentre en su interior, deberá superar una tirada de salvación de Constitución CD ??? al final de dicho turno o se verá obligada a regurgitar a todas las criaturas engullidas, que sufrirán el Estado Derribado en un espacio situado a ??? pies o menos del [MON]. Si el [MON] muere, las criaturas engullidas dejarán de estar Apresadas por este y podrán escapar del cadáver utilizando ??? pies de su movimiento. Sufrirán el Estado Derribado al salir."
+		},
+		{
+			"name": "Enjambre",
+			"desc": "El enjambre puede ocupar el espacio de otra criatura y viceversa. Además, también es capaz de moverse a través de cualquier abertura por la que quepa un ???. El enjambre no puede recuperar Puntos de Golpe ni ganar Puntos de Golpe Temporales."
+		},
+		{
+			"name": "Enlace Telepático",
+			"desc": "Mientras el [mon] se encuentre en el mismo plano de existencia que su maestro, podrá transmitirle mágicamente lo que están percibiendo sus sentidos y los dos podrán comunicarse telepáticamente."
+		},
+		{
+			"name": "Esconderse en las sombras",
+			"desc": "Mientras se encuentra bajo Luz Tenue o en Oscuridad, el [MON] puede usar la Acción Esconderse."
+		},
+		{
+			"name": "Escurridizo",
+			"desc": "El [mon] tiene Ventaja en las pruebas de característica y las tiradas de salvación para escapar de un agarre."
+		},
+		{
+			"name": "Etéreo (Acción)",
+			"realname": "Etéreo",
+			"desc": "El [mon] entra en el Plano Etéreo si se encontraba en el Plano Material, o en este si se hallaba en aquel. Mientras se sitúe en la Frontera Etérea, será visible también en el Plano Material, y viceversa, aunque no podrá afectar o ser afectado por nada que se encuentre en el otro plano."
+		},
+		{
+			"name": "Excavador",
+			"desc": "El [MON] puede excavar a través de roca sólida a la mitad de su Velocidad Excavando, dejando a su paso un túnel de ??? pies de diámetro."
+		},
+		{
+			"name": "Excursión Etérea",
+			"realname": "Excursión etérea",
+			"desc": "La [MON] es capaz de moverse mágicamente desde el Plano Material al Plano Etéreo, o viceversa."
+		},
+		{
+			"name": "Explotar al Morir",
+			"desc": "Si el [mon] muere, explotará en ???. Todas las criaturas que se encuentren a ??? pies o menos de él deberán hacer una tirada de salvación de Destreza CD ???, sufriendo [???d???] de daño ??? si la fallan, o la mitad de ese daño si la superan. Los objetos inflamables situados en el área que no lleve o vista nadie se prenderán fuego."
+		},
+		{
+			"name": "Evitar",
+			"desc": "Si la [MON] es víctima de un efecto que la permita hacer una tirada de salvación de Destreza para recibir solo la mitad del daño, no recibirá daño alguno si tiene éxito en la tirada de salvación y solo la mitad si falla."
+		},
+		{
+			"name": "Fallecimiento Elemental",
+			"desc": "Si el [MON] muere, su cuerpo se desintegrará en ???, quedando en su lugar únicamente el equipo que llevara o vistiera."
+		},
+		{
+			"name": "Forma Corrosiva",
+			"desc": "Cualquier criatura que toque al [MON] o le impacte con un ataque cuerpo a cuerpo estando a 5 pies o menos de distancia recibirá [1D8] de daño de Ácido. Además, el arma no mágica hecha de metal o madera que entre en contacto con el [MON] se correrá. Tras causar daño, el arma sufrirá un penalizador de -1 permanente y acumulativo a las tiradas de daño. Si este penalizador llega a ser de -5, el arma será destruida. Cualquier munición no mágica hecha de metal o madera que impacte al [MON] será destruida tras causar su daño.\nEl [MON] es capaz de consumir un grosor de 2 pulgadas de madera o metal no mágicos por asalto."
+		},
+		{
+			"name": "Forma Elemental",
+			"realname": "Forma de ???",
+			"desc": "El [MON] puede entrar en el espacio de una criatura hostil y detenerse allí. Puede moverse por un espacio tan estrecho como de 1 pulgada de ancho sin apretarse."
+		},
+		{
+			"name": "Forma Inmutable",
+			"desc": "El [MON] es inmune a cualquier conjuro o efecto que fuera a alterar su forma."
+		},
+		{
+			"name": "Fortaleza de Muerto Viviente",
+			"desc": "Si el daño reduce al [MON] a 0 Puntos de Golpe, esta deberá hacer una tirada de salvación de Constitución con CD 5 + el daño sufrido, siempre que este no sea Radiante o proviniente de un crítico. Si tiene éxito, el [MON] pasa a tener 1 punto de golpe en lugar de 0."
+		},
+		{
+			"name": "Frenesí Sangriento",
+			"desc": "El [MON] tiene Ventaja en las tiradas de ataque cuerpo a cuerpo contra cualquier criatura que no posea todos sus Puntos de Golpe."
+		},
+		{
+			"name": "Furia si Está Herido",
+			"desc": "El [mon] tendrá Ventaja en las tiradas de ataque si le quedan ??? Puntos de Golpe o menos. En estas circunstancias, también infligirá [???d???] de daño adicional a cualquier objetivo al que impacte con un ataque cuerpo a cuerpo."
+		},
+		{
+			"name": "Hablar con las Bestias y las Plantas",
+			"desc": "La [MON] puede comunicarse con bestias y plantas como si tuvieran un idioma en común."
+		},
+		{
+			"name": "Hedor",
+			"desc": "Cualquier criatura que empiece su turno situada a 5 pies o menos del [mon] deberá superar una tirada de salvación de Constitución CD ??? o estará envenenada hasta el principio de su siguiente turno. Si el objetivo tiene éxito en la tirada de salvación, será inmune al hedor del [mon] durante las próximas 24 horas."
+		},
+		{
+			"name": "Hipersensibilidad a la Luz Solar",
+			"desc": "El [mon] recibirá ??? de daño Radiante si empieza su turno bajo la luz solar. Además, sufre Desventaja en las tiradas de ataque y pruebas de característica hechas bajo la luz del sol."
+		},
+		{
+			"name": "Huida veloz",
+			"desc": "El [mon] puede usar la Acción de Destrabarse o Esconderse."
+		},
+		{
+			"name": "Iluminar",
+			"desc": "El [MON] emite Luz Brillante en un radio de ??? pies y Luz Tenue ??? pies más allá"
+		},
+		{
+			"name": "Imitación",
+			"desc": "El [MON] puede imitar sonidos ??? que haya oído previamente. Cualquier criatura que oiga estos sonidos se dará cuenta de que son imitaciones si supera una prueba de Sabiduría (Perspicacia) CD ???."
+		},
+		{
+			"name": "Incansable",
+			"realname": "Incansable (se recarga tras un Descanso Corto o Largo)",
+			"desc": "Si el [MON] recibe ??? de daño o menos, y esta pérdida haría que sus Puntos de Golpe se redujeran a 0, en lugar de eso pasará a tener 1 punto de golpe."
+		},
+		{
+			"name": "Inmunidad a la Expulsión",
+			"desc": "La [mon] es inmune a los efectos que expulsan muertos vivientes."
+		},
+		{
+			"name": "Inmunidad Mágica Limitada",
+			"desc": "El [mon] no puede ser afectado o detectado por conjuros de nivel ??? o menos, salvo que así lo quiera. Además, tiene Ventaja en las tiradas de salvación contra el resto de conjuros y efectos mágicos."
+		},
+		{
+			"name": "Inscrutable",
+			"desc": "La [mon] es inmune a cualquier efecto que intente percibir sus emociones o leer sus pensamientos, así como a los conjuros de adivinación a los que ella no quiera ser sometida. Las pruebas de Sabiduría (Perspicacia) para determinar las intenciones de la [mon] o si es sincera tienen Desventaja."
+		},
+		{
+			"name": "Inspirar (1/Día)",
+			"desc": "Mientras hace un Descanso Corto, el [mon] puede pasar 1 minuto cantando, tocando un isntrumento, contando una historia o recitando un poema para calmar e inspirar a otras criaturas. Hasta cinco criaturas de su elección que pueda ver y oír su interpretación ganan ??? Puntos de Golpe Temporales al final de dicho Descanso Corto."
+		},
+		{
+			"name": "Invisibilidad (Acción)",
+			"realname": "Invisibilidad",
+			"desc": "El [MON] es capaz de, mágicamente, volverse invisible hasta que ataque, lance un conjuro o deje de concentrarse (como si se concentrara en un conjuro). Cualquier elemento de equipo que el [MON] sostenga o lleve puesto también se vuelve invisible."
+		},
+		{
+			"name": "Invisibilidad (Permanente)",
+			"realname": "Invisibilidad",
+			"desc": "El [MON] es invisible."
+		},
+		{
+			"name": "Lanzamiento de Conjuros Innato (Un Solo Conjuro)",
+			"realname": "Lanzamiento de Conjuros Innato (???/Día)",
+			"desc": "El [MON] puede lanzar de forma innata ??? (salvación de conjuros CD ???), sin necesidad de componentes materiales. Su aptitud mágica es ???."
+		},
+		{
+			"name": "Leer pensamientos (Acción)",
+			"realname": "Leer pensamientos",
+			"desc": "El [MON] puede leer mediante magia los pensamienos superficiales de una criatura que se encuentre a ??? pies o menos. Este efecto es capaz de atravesar la mayoría de las barreras, pero se ve boqueado por 3 pies de madera o tierra, 2 pies de piedra, 2 pulgadas de metal, o una fina lámina de plomo. Si el objetivo permanece dentro del alcance y el [MON] mantiene la concentración (como si se concentrara en un conjuro), este podrá seguir percibiendo sus pensamientos. Mientras le esté leyendo la mente, el [MON] tendrá Ventaja en las pruebas de Sabiduría (Perspicacia) y Carisma (Engaño, Intimidación, y Persuasión) contra el objetivo."
+		},
+		{
+			"name": "Libertad de Movimiento",
+			"desc": "El [MON] ignora el Terreno Difícil, y los efectos mágicos no pueden reducir su velocidad o hacer que sea apresado. Además, puede utilizar 5 pies de su movimiento para escapar de cualquier atadura no mágica o de un agarre."
+		},
+		{
+			"name": "Liderazgo (Acción)",
+			"realname": "Liderazgo (se recarga tras un Descanso Corto o Largo)",
+			"desc": "Durante 1 minuto, el [MON] puede pronunciar una orden o advertencia especial cada vez que una criatura no hostil que pueda ver y se encuentre a 30 pies o menos de distancia de él haga una tirada de ataque o de salvación. Si puede oír al [MON] y entiende su idioma, la criatura podrá añadir un d4 a su tirada, pero solo podrá beneficiarse de un dado de liderazgo al mismo tiempo. Este efecto termina si el [MON] resulta incapacitado."
+		},
+		{
+			"name": "Linaje Feérico",
+			"desc": "El [MON] tiene Ventaja en las tiradas de salvación para evitar los Estados Hechizado y la magia no puede dormirlo."
+		},
+		{
+			"name": "Mente Protegida",
+			"desc": "El [MON] es inmune al escudriñamiento y a cualquier efecto que intente percibir sus emociones, leer sus pensamientos o determinar su ubicación.."
+		},
+		{
+			"name": "Mirada espantosa (acción)",
+			"desc": "La [mon] elige a una criatura que se encuentre a ??? pies o menos y pueda ver. Si el objetivo es capaz de observar a la [mon], deberá superar una tirada de salvación de Sabiduría CD ??? contra este efecto mágico o estará Asustado hasta el final del siguiente turno de la [mon]. Si falla la tirada de salvación por 5 o más, también estará paralizado durante este periodo. Las criaturas que superen la tirada de salvación serán inmunes a la mirada aterradora de todas las [mons] (pero no de ???) durante las siguientes 24 horas."
+		},
+		{
+			"name": "Mirada Petrificante",
+			"desc": "Si una criatura empieza su turno a ??? pies o menos del [MON], los dos pueden verse entre sí y el [MON] no está incapacitado, este último podrá obligar a la criatura a hacer una tirada de salvación de Constitución CD ???. Si falla, la criatura empezará a convertirse mágicamente en piedra, estará apresada y deberá repetir la tirada de salvación al final de su próximo turno. Si tiene éxito, el efecto termina. Si falla, la criatura estará petrificada hasta que sea liberada mediante un conjuro de _restablecimiento mayor_ o algún efecto mágico similar.\nSi la criatura no está sorprendida cuando el [MON] intente petrificarla, podrá apartar la vista, evitando así tener que realizar la tirada de salvación al inicio de su turno. Si hace esto, no podrá ver al [MON] hasta el principio de su próximo turno, momento en el que podrá apartar la vista otra vez- No obstante, si observa al [MON] antes de que llegue ese momento, tendrá que realizar la tirada de salvación inmediatamente.\nSi el [MON] ve su propio reflejo a ??? pies o menos y bajo luz brillante, lo confundirá con un oponente y usará su mirada contra sí mismo."
+		},
+		{
+			"name": "Monstruo de Asedio",
+			"desc": "El [MON] inflige el doble de daño a objetos y estructuras."
+		},
+		{
+			"name": "Movimiento Incorpóreo",
+			"desc": "El [MON] puede moverse a través de otras criaturas y objetos como si fueran Terreno Difícil. Recibe [1D10] de daño de Fuerza si acaba su turno dentro de un objeto."
+		},
+		{
+			"name": "Múltiples Cabezas",
+			"desc": "La [mon] tiene cinco cabezas. Mientras conserve más de una cabeza, la [mon] tendrá Ventaja en las tiradas de salvación para evitar los Estados Asustado, Aturdido, Cegado, Ensordecido, Hechizado e Inconsciente.\nSiempre que la [mon] reciba al menos ??? de daño en el mismo turno, una de sus cabezas morirá. Si todas sus cabezas fallecen, la [mon] también lo hará.\nAl final de su turno, a la [mon] le crecen dos cabezas por cada una que hubiera muerto desde el final de su turno anterior. Esto no ocurrirá si ha recibido daño de ??? desde el final de su turno anterior. La [mon] recuperará ??? Puntos de Golpe por cada cabeza que haya crecido de esta forma."
+		},
+		{
+			"name": "Naturally Stealthy",
+			"desc": "The [MON] can attempt to hide even when it is obscured only by a creature that is at least one size larger than itself."
+		},
+		{
+			"name": "Nube Mucosa",
+			"desc": "Mientras permenzca bajo el agua, el [MON] está rodeado por una mucosa transformadora. Cualquier criatura que toque el [MON] o le impacte con un ataque cuerpo a cuerpo estando a 5 pies o menos de distancia deberá hacer uan tirada de salvación de Constitución CD [CON SAVE]. Si falla, enfermará durante [1D4] horas. Las criaturas enfermas solo podrán respirar bajo el agua."
+		},
+		{
+			"name": "Oído Agudo",
+			"desc": "El [MON] tiene Ventaja en las pruebas de Sabiduría (Percepción) que dependan del oído."
+		},
+		{
+			"name": "Oído y Olfato Agudos",
+			"desc": "El [MON] tiene Ventaja en las pruebas de Sabiduría (Percepción) que dependan del olfato o del oído."
+		},
+		{
+			"name": "Oído y Vista Agudos",
+			"desc": "El [MON] tiene Ventaja en las pruebas de Sabiduría (Percepción) que dependan de la vista o del oído."
+		},
+		{
+			"name": "Olfatear Hierro",
+			"desc": "El [MON] puede, mediante el olfato, identificar con precisión dónde se encuentran los metales férricos situados a ??? pies o menos de él."
+		},
+		{
+			"name": "Olfato y Vista Agudos",
+			"desc": "El [MON] tiene Ventaja en las pruebas de Sabiduría (Percepción) que dependan de la vista o del olfato."
+		},
+		{
+			"name": "Olfato Agudo",
+			"desc": "El [MON] tiene Ventaja en las pruebas de Sabiduría (Percepción) que dependan del olfato."
+		},
+		{
+			"name": "Otorgar Resistencia",
+			"realname": "Otorgar Resistencia al ???",
+			"desc": "La [MON] puede proporcionar resistencia al daño ??? a cualquier que la monte."
+		},
+		{
+			"name": "Parada (Reacción)",
+			"realname": "Parada",
+			"desc": "El [MON] añade ??? a su CA contra un ataque cuerpo a cuerpo que le fuera a impactar. Para poder hacer esto debe ver a su atacante y estar empuñando un arma cuerpo a cuerpo."
+		},
+		{
+			"name": "Parcialmente Anfibio",
+			"desc": "El [MON] puede respirar tanto dentro del agua como fuera de ella, pero necesita sumergirse en este líquido al menos 4 horas al día para evitar ahogarse."
+		},
+		{
+			"name": "Pasar Volando",
+			"desc": "El [MON] no provoca ataques de oportunidad cuando vuela para moverse fuera del alcance de un enemigo."
+		},
+		{
+			"name": "Pasivismo Animal",
+			"realname": "Pasivismo de ???",
+			"desc": "Ningún ??? puede atacar voluntariamente a [mon]. Pueden ser forzados a hacerlo mediante la magia."
+		},
+		{
+			"name": "Paso Arbóreo",
+			"desc": "Durante su turno, la [MON] puede utilizar 10 pies de su movimiento para, mágicamente, entrar en un árbol vivo dentro de su alcance y surgir del interior de otro árbol vivo que se encuentre a 60 pies o menos del primero. Aparecerá en un espacio desocupado a 5 pies o menos del segundo árbol. Ambos árboles deben ser de tamaño Grande o mayor."
+		},
+		{
+			"name": "Paso Firme",
+			"desc": "El [MON] tiene Ventaja en las tiradas de salvación de Fuerza y Destreza hechas contra efectos que lo derribarían."
+		},
+		{
+			"name": "Percepción Divina",
+			"desc": "El [MON] reconoce cualquier mentira que escuche."
+		},
+		{
+			"name": "Prerrogativa Divina",
+			"desc": "El [mon] puede gastar un espacio de conjuro para hacer que sus ataques con arma cuerpo a cuerpo causen mágicamente [???d???] de daño ??? adicionales cuando impactan. Este beneficio dura hasta el final del turno. Si el [mon] gasta un espacio de conjuro de nivel ??? o más, el daño adicional aumenta en [???d???] por cada nivel por encima de 1 del espacio."
+		},
+		{
+			"name": "Presencia Aterradora (Acción)",
+			"realname": "Presencia Aterradora",
+			"desc": "Todas las criaturas que el [MON] elija, que se encuentre a 120 pies o menos de él y sean conscientes de su presencia, deberán superar una tirada de salvación de Sabiduría CD ??? o estarán asustadas durante 1 minuto. Cada objetivo puede repetir la tirada de salvación al final de cada uno de sus turnos, librándose del efecto si tiene éxito. Si una criatura supera la tirada de salvación o el efecto termina, será inmune a la presencia aterradora del [MON] durante las próximas 24 horas."
+		},
+		{
+			"name": "Rabia",
+			"desc": "Si el [MON] reduce los Puntos de Golpe de una criatura a 0 mediante un ataque cuerpo a cuerpo durante su turno, puede moverse hasta la mitad de su Velocidad y realizar un ataque de ???."
+		},
+		{
+			"name": "Reactivo",
+			"desc": "El [MON] puede llevar a cabo una reacción en cada uno de sus turnos, en lugar de solo una vez por asalto."
+		},
+		{
+			"name": "Recordar Laberinto",
+			"desc": "El [MON] recuerda con total precisión cualquier camino que haya recorrido antes."
+		},
+		{
+			"name": "Regeneración",
+			"desc": "El [MON] recupera ??? Puntos de Golpe al principio de su turno si tiene al menos 1 punto de golpe."
+		},
+		{
+			"name": "Regeneración (Troll)",
+			"realname": "Regeneración",
+			"desc": "El [MON] recupera ??? Puntos de Golpe al principio de su turno. Si recibe daño de Ácido o de Fuego, este atributo no tendrá efecto al principio del próximo turno del [MON]. El [MON] solo morirá si empieza su turno con 0 Puntos de Golpe y no se regenera."
+		},
+		{
+			"name": "Rejuvenecimiento",
+			"desc": "Si posee una filacteria y es destruido, el [MON] obtendrá un cuerpo nuevo en ???d??? días, recuperando todos sus Puntos de Golpe y volviendo a estar en plenitud de facultades. El cuerpo nuevo aparece situado a 5 pies o menos de la filacteria."
+		},
+		{
+			"name": "Resiliencia Duergar",
+			"desc": "El duergar tiene Ventaja en las tiradas de salvación contra veneno, conjuros e ilusiones, así como para evitar los Estados Hechizado o paralizado."
+		},
+		{
+			"name": "Resiliencia Enana",
+			"desc": "El enano tiene Ventaja en las tiradas de salvación contra veneno, conjuros e ilusiones, así como para evitar los Estados Hechizado o paralizado."
+		},
+		{
+			"name": "Resistencia a la Expulsión",
+			"desc": "El [MON] posee Ventaja en las tiradas de salvación de los efectos de que expulsan muertos vivientes."
+		},
+		{
+			"name": "Resistencia Mágica",
+			"desc": "El [MON] tiene Ventaja en las tiradas de salvación contra conjuros y otros efectos mágicos."
+		},
+		{
+			"name": "Respirar en el Agua",
+			"desc": "El [MON] solo puede respirar bajo el agua."
+		},
+		{
+			"name": "Resuelto",
+			"desc": "El [MON] no podrá ser austado mientras sea capaz de ver a una criatura aliada a 30 pies o menos de él."
+		},
+		{
+			"name": "Saltar con Carrera",
+			"desc": "El [MON] puede hacer un salto de longitud de ??? pies o un salto de altura de ??? pies, pero solo si ha cogido carrerilla."
+		},
+		{
+			"name": "Saltar sin Carrera",
+			"desc": "El [MON] puede hacer un salto de longitud de ??? pies o un salto de altura de ??? pies, tanto si ha cogido carrerilla como si no."
+		},
+		{
+			"name": "Sensibilidad a la Luz Solar",
+			"desc": "La [MON] tiene Desventaja en las tiradas de ataque y las pruebas de Sabiduría (Percepción) que dependan de la vista hechas bajo la luz del sol."
+		},
+		{
+			"name": "Sentidos Agudos",
+			"desc": "El [MON] tiene Ventaja en las pruebas de Sabiduría (Percepción) que dependan de la vista, del oído o del olfato."
+		},
+		{
+			"name": "Sentidos de Ciego",
+			"desc": "El [MON] perderá su Visión Ciega si tiene el Estado Ensordecido y no puede usar el olfato."
+		},
+		{
+			"name": "Sentir a través de Telarañas",
+			"desc": "Mientras esté en contacto con una telaraña, la [MON] sabrá la ubicación exacta de cualquier otra criatura en contacto con dicha tela."
+		},
+		{
+			"name": "Sentir Magia",
+			"desc": "El [MON] puede percibir la magia en un radio de 120 pies a voluntad. Este atributo funciona, en todos los demás aspectos, igual que el conjuro _detectar magia_, pero sin ser el mismo mágico."
+		},
+		{
+			"name": "Susceptibilidad a la Antimagia",
+			"desc": "La [MON] estará incapacitada mientras se encuentre en el área cubierta por un _campo antimagia_. Si es el objetivo de disipar magia, la [MON] deberá tener éxito en una tirada de salvación de Constitución con CD igual a la salvación de conjuros del lanzador o estará Inconsciente durante 1 minuto."
+		},
+		{
+			"name": "Telepatía con Animales",
+			"realname": "Telepatía con ???",
+			"desc": "El [MON] puede dar órdenes mágicas a cualquier ??? en un radio de 120 pies, utilizando una telepatía limitada."
+		},
+		{
+			"name": "Telepatía Inquisitiva",
+			"desc": "Si una criatura se comunica telepáticamente con el [MON] y este puede verla, descubrirá cuales son los deseos más fuerte de la criatura."
+		},
+		{
+			"name": "Telepatía Limitada",
+			"desc": "El [mon] puede comunicarse mediante ideas, emociones o imágenes simples, mágicamente y de forma telepática, con cualquier criatura que se encuentre a ??? pies o menos de él y pueda entender al menos un idioma."
+		},
+		{
+			"name": "Teletransporte (Acción o Acción Legendaria)",
+			"realname": "Teletransporte",
+			"desc": "El [MON] se teletransporta mágicamente, junto con cualquier equipo que lleve o vista, hasta 120 pies a un espacio desocupado que pueda ver."
+		},
+		{
+			"name": "Temerario",
+			"desc": "Al inicio de su turno, el [MON] puede decidir obtener Ventaja en todas las tiradas de ataque con arma cuerpo a cuerpo que haga durante dicho turno, pero, a cambio, las tiradas de ataque que le tengan como objetivo hasta el final de su siguiente turno también tendrán Ventaja."
+		},
+		{
+			"name": "Toque sanador (Acción)",
+			"realname": "Toque sanador (???/Día)",
+			"desc": "El [MON] toca a otra criatura. Esta recupera mágicamente [???D??? + ???] Puntos de Golpe y queda liberada de cualquier maldición, enfermedad, veneno, ceguera o sordera."
+		},
+		{
+			"name": "Transferir Daño",
+			"desc": "Mientras esté enganchado a una criatura, el [mon] solo recibe la mitad del daño que se le inflija. La otra mitad del daño lo recibe la criatura a la que se ha enganchado."
+		},
+		{
+			"name": "Trepar cual Arácnido",
+			"desc": "El [MON] puede trepar por superficies difíciles, incluyendo recorrer el techo boca abajo, sin tener que hacer pruebas de característica."
+		},
+		{
+			"name": "Valiente",
+			"desc": "El [MON] tiene Ventaja en las tiradas de salvación para evitar los Estados Asustado."
+		},
+		{
+			"name": "Ventaja Marcial",
+			"desc": "El [MON] puede, una vez por turno, infligir [???D???] de daño adicional a una criatura a la que impacte con un ataque con arma si dicha criatura está a 5 pies o menos de un aliado del [MON] que no esté incapacitado."
+		},
+		{
+			"name": "Vigilante",
+			"desc": "Aunque esté durmiendo, la [mon] siempre mantiene despierta al menos una de sus cabezas."
+		},
+		{
+			"name": "Visión Etérea",
+			"desc": "El [MON] puede ver a 60 pies en el Plano Etéreo mientras se encuentra en el Plano Material, y viceversa."
+		},
+		{
+			"name": "Vista Aguda",
+			"desc": "El [MON] tiene Ventaja en las pruebas de Sabiduría (Percepción) que dependan de la vista."
+		},
+		{
+			"name": "Vista del Diablo",
+			"desc": "La oscuridad mágica no impide la visión en la oscuridad del diablo."
+		},
+		{
+			"name": "",
+			"desc": null
+		},
+		{
+			"name": "Alabarda",
+			"desc": "_Ataque con arma cuerpo a cuerpo:_ [FUE ATK] a impactar, alcance 10 pies, un objetivo. _Impacto:_ [FUE 1D10] de daño Cortante."
+		},
+		{
+			"name": "Arco corto",
+			"desc": "_Ataque de arma a distancia:_ [DES ATK] a impactar, alcance 80/320 pies, un objetivo. _Impacto:_ [DES 1D6] de daño Perforante."
+		},
+		{
+			"name": "Arco largo",
+			"desc": "_Ataque de arma a distancia:_ [DES ATK] a impactar, alcance 150/600 pies, un objetivo. _Impacto:_ [DES 1D8] de daño Perforante."
+		},
+		{
+			"name": "Ballesta de mano",
+			"desc": "_Ataque de arma a distancia:_ [DES ATK] a impactar, alcance 30/120 pies, un objetivo. _Impacto:_ [DES 1D6] de daño Perforante."
+		},
+		{
+			"name": "Ballesta ligera",
+			"desc": "_Ataque de arma a distancia:_ [DES ATK] a impactar, alcance 80/320 pies, un objetivo. _Impacto:_ [DES 1D8] de daño Perforante."
+		},
+		{
+			"name": "Ballesta pesada",
+			"desc": "_Ataque de arma a distancia:_ [DES ATK] a impactar, alcance 100/400 pies, un objetivo. _Impacto:_ [DES 1D10] de daño Perforante."
+		},
+		{
+			"name": "Bastón",
+			"desc": "_Ataque con arma cuerpo a cuerpo:_ [FUE ATK] a impactar, alcance 5 pies, un objetivo. _Impacto:_ [FUE 1D6] de daño Contundente, o [FUE 1D8] de daño Contundente si se usa a dos manos."
+		},
+		{
+			"name": "Cerbatana",
+			"desc": "_Ataque de arma a distancia:_ [DES ATK] a impactar, alcance 25/100 pies, un objetivo. _Impacto:_ [DES 1] de daño Perforante."
+		},
+		{
+			"name": "Cimitarra (FUE)",
+			"realname": "Cimitarra",
+			"desc": "_Ataque con arma cuerpo a cuerpo:_ [FUE ATK] a impactar, alcance 5 pies, un objetivo. _Impacto:_ [FUE 1D6] de daño Cortante."
+		},
+		{
+			"name": "Cimitarra (DES)",
+			"realname": "Cimitarra",
+			"desc": "_Ataque con arma cuerpo a cuerpo:_ [DES ATK] a impactar, alcance 5 pies, un objetivo. _Impacto:_ [DES 1D6] de daño Cortante."
+		},
+		{
+			"name": "Daga (FUE)",
+			"realname": "Daga",
+			"desc": "_Ataque con arma cuerpo a cuerpo o a distancia:_ [FUE ATK] a impactar, alcance 5 pies o alcance 20/60 pies, un objetivo. _Impacto:_ [FUE 1D4] de daño Perforante."
+		},
+		{
+			"name": "Daga (DES)",
+			"realname": "Daga",
+			"desc": "_Ataque con arma cuerpo a cuerpo o a distancia:_ [DES ATK] a impactar, alcance 5 pies o alcance 20/60 pies, un objetivo. _Impacto:_ [DES 1D4] de daño Perforante."
+		},
+		{
+			"name": "Dardo (FUE)",
+			"realname": "Dardo",
+			"desc": "_Ataque de arma a distancia:_ [FUE ATK] a impactar, alcance 20/60 pies, un objetivo. _Impacto:_ [FUE 1D4] de daño Perforante."
+		},
+		{
+			"name": "Dardo (DES)",
+			"realname": "Dardo",
+			"desc": "_Ataque de arma a distancia:_ [DES ATK] a impactar, alcance 20/60 pies, un objetivo. _Impacto:_ [DES 1D4] de daño Perforante."
+		},
+		{
+			"name": "Espada corta (FUE)",
+			"realname": "Espada corta",
+			"desc": "_Ataque con arma cuerpo a cuerpo:_ [FUE ATK] a impactar, alcance 5 pies, un objetivo. _Impacto:_ [FUE 1D6] de daño Perforante."
+		},
+		{
+			"name": "Espada corta (DES)",
+			"realname": "Espada corta",
+			"desc": "_Ataque con arma cuerpo a cuerpo:_ [DES ATK] a impactar, alcance 5 pies, un objetivo. _Impacto:_ [DES 1D6] de daño Perforante."
+		},
+		{
+			"name": "Espada larga",
+			"desc": "_Ataque con arma cuerpo a cuerpo:_ [FUE ATK] a impactar, alcance 5 pies, un objetivo. _Impacto:_ [FUE 1D8] de daño Cortante, o [FUE 1D10] de daño Cortante si se usa a dos manos."
+		},
+		{
+			"name": "Espadón",
+			"desc": "_Ataque con arma cuerpo a cuerpo:_ [FUE ATK] a impactar, alcance 5 pies, un objetivo. _Impacto:_ [FUE 2D6] de daño Cortante."
+		},
+		{
+			"name": "Estoque (FUE)",
+			"realname": "Estoque",
+			"desc": "_Ataque con arma cuerpo a cuerpo:_ [FUE ATK] a impactar, alcance 5 pies, un objetivo. _Impacto:_ [FUE 1D8] de daño Perforante."
+		},
+		{
+			"name": "Estoque (DES)",
+			"realname": "Estoque",
+			"desc": "_Ataque con arma cuerpo a cuerpo:_ [DES ATK] a impactar, alcance 5 pies, un objetivo. _Impacto:_ [DES 1D8] de daño Perforante."
+		},
+		{
+			"name": "Flagelo",
+			"desc": "_Ataque con arma cuerpo a cuerpo:_ [FUE ATK] a impactar, alcance 5 pies, un objetivo. _Impacto:_ [FUE 1D8] de daño Contundente."
+		},
+		{
+			"name": "Garrote",
+			"desc": "_Ataque con arma cuerpo a cuerpo:_ [FUE ATK] a impactar, alcance 5 pies, un objetivo. _Impacto:_ [FUE 1D4] de daño Contundente."
+		},
+		{
+			"name": "Garrote grande",
+			"desc": "_Ataque con arma cuerpo a cuerpo:_ [FUE ATK] a impactar, alcance 5 pies, un objetivo. _Impacto:_ [FUE 1D8] de daño Contundente."
+		},
+		{
+			"name": "Guja",
+			"desc": "_Ataque con arma cuerpo a cuerpo:_ [FUE ATK] a impactar, alcance 10 pies, un objetivo. _Impacto:_ [FUE 1D10] de daño Cortante."
+		},
+		{
+			"name": "Hacha a dos manos",
+			"desc": "_Ataque con arma cuerpo a cuerpo:_ [FUE ATK] a impactar, alcance 5 pies, un objetivo. _Impacto:_ [FUE 1D12] de daño Cortante."
+		},
+		{
+			"name": "Hacha de guerra",
+			"desc": "_Ataque con arma cuerpo a cuerpo:_ [FUE ATK] a impactar, alcance 5 pies, un objetivo. _Impacto:_ [FUE 1D8] de daño Cortante, o [FUE 1D10] de daño Cortante si se usa a dos manos."
+		},
+		{
+			"name": "Hacha de mano",
+			"desc": "_Ataque con arma cuerpo a cuerpo o a distancia:_ [FUE ATK] a impactar, alcance 5 pies o alcance 20/60 pies, un objetivo. _Impacto:_ [FUE 1D6] de daño Cortante."
+		},
+		{
+			"name": "Honda",
+			"desc": "_Ataque de arma a distancia:_ [DES ATK] a impactar, alcance 30/120 pies, un objetivo. _Impacto:_ [DES 1D4] de daño Contundente."
+		},
+		{
+			"name": "Hoz",
+			"desc": "_Ataque con arma cuerpo a cuerpo:_ [FUE ATK] a impactar, alcance 5 pies, un objetivo. _Impacto:_ [FUE 1D4] de daño Cortante."
+		},
+		{
+			"name": "Jabalina",
+			"desc": "_Ataque con arma cuerpo a cuerpo o a distancia:_ [FUE ATK] a impactar, alcance 5 pies o alcance 30/120 pies, un objetivo. _Impacto:_ [FUE 1D6] de daño Perforante."
+		},
+		{
+			"name": "Lanza",
+			"desc": "_Ataque con arma cuerpo a cuerpo o a distancia:_ [FUE ATK] a impactar, alcance 5 pies o alcance 20/60 pies, un objetivo. _Impacto:_ [FUE 1D6] de daño Perforante, o [FUE 1D8] de daño Perforante si se usa a dos manos para hacer un ataque cuerpo a cuerpo."
+		},
+		{
+			"name": "Lanza de caballería",
+			"desc": "_Ataque con arma cuerpo a cuerpo:_ [FUE ATK] a impactar, alcance 10 pies, un objetivo. _Impacto:_ [FUE 1D12] de daño Perforante."
+		},
+		{
+			"name": "Látigo (FUE)",
+			"realname": "Látigo",
+			"desc": "_Ataque con arma cuerpo a cuerpo:_ [FUE ATK] a impactar, alcance 10 pies, un objetivo. _Impacto:_ [FUE 1D4] de daño Cortante."
+		},
+		{
+			"name": "Látigo (DES)",
+			"realname": "Látigo",
+			"desc": "_Ataque con arma cuerpo a cuerpo:_ [DES ATK] a impactar, alcance 10 pies, un objetivo. _Impacto:_ [DES 1D4] de daño Cortante."
+		},
+		{
+			"name": "Light Hammer",
+			"desc": "_Ataque con arma cuerpo a cuerpo o a distancia:_ [FUE ATK] a impactar, alcance 5 pies o alcance 20/60 pies, un objetivo. _Impacto:_ [FUE 1D4] de daño Contundente."
+		},
+		{
+			"name": "Lucero del alba",
+			"desc": "_Ataque con arma cuerpo a cuerpo:_ [FUE ATK] a impactar, alcance 5 pies, un objetivo. _Impacto:_ [FUE 1D8] de daño Perforante."
+		},
+		{
+			"name": "Martillo de guerra",
+			"desc": "_Ataque con arma cuerpo a cuerpo:_ [FUE ATK] a impactar, alcance 5 pies, un objetivo. _Impacto:_ [FUE 1D8] de daño Contundente, o [FUE 1D10] de daño Contundente si se usa a dos manos."
+		},
+		{
+			"name": "Maza",
+			"desc": "_Ataque con arma cuerpo a cuerpo:_ [FUE ATK] a impactar, alcance 5 pies, un objetivo. _Impacto:_ [FUE 1D6] de daño Contundente."
+		},
+		{
+			"name": "Maza a dos manos",
+			"desc": "_Ataque con arma cuerpo a cuerpo:_ [FUE ATK] a impactar, alcance 5 pies, un objetivo. _Impacto:_ [FUE 2D6] de daño Contundente."
+		},
+		{
+			"name": "Pica",
+			"desc": "_Ataque con arma cuerpo a cuerpo:_ [FUE ATK] a impactar, alcance 10 pies, un objetivo. _Impacto:_ [FUE 1D10] de daño Perforante."
+		},
+		{
+			"name": "Pico de guerra",
+			"desc": "_Ataque con arma cuerpo a cuerpo:_ [FUE ATK] a impactar, alcance 5 pies, un objetivo. _Impacto:_ [FUE 1D8] de daño Perforante."
+		},
+		{
+			"name": "Red",
+			"desc": "_Ataque de arma a distancia:_ [DES ATK] a impactar, alcance 5/15 pies, una criatura Grande o menor. _Impacto:_ El obejtivo está apresado. Una criatura puede gastar su acción para hacer una prueba de Fuerza CD 10 liberándose o a otra criatura en al red, terminando este efecto con un éxito. Infligir 5 de daño Cortante a la red (CA 10) libera al objetivo sin dañarla y destruye la red."
+		},
+		{
+			"name": "Tridente",
+			"desc": "_Ataque con arma cuerpo a cuerpo o a distancia:_ [FUE ATK] a impactar, alcance 5 pies o alcance 20/60 pies, un objetivo. _Impacto:_ [FUE 1D6] de daño Perforante, o [FUE 1D8] de daño Perforante si se usa a dos manos para hacer un ataque cuerpo a cuerpo."
+		},
+		{
+			"name": "Golpe desarmado",
+			"desc": "_Ataque con arma cuerpo a cuerpo:_ [FUE ATK] a impactar, alcance 5 pies, un objetivo. _Impacto:_ [FUE 1] de daño Contundente."
+		}
+	]
+}
