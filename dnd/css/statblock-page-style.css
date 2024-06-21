@@ -66,10 +66,6 @@
     font-weight: bold;
 }
 
-#proficiency-bonus-line {
-    float: right;
-}
-
 @media screen and (min-width: 992px) {
     #stat-block-body {
         background-image: url("../dndimages/statblockbkg.jpg");

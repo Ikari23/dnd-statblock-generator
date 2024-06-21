@@ -5,8 +5,13 @@
     <meta charset="utf-8" />
     <title>D&amp;D 5e Statblock Generator</title>
     <link rel="shortcut icon" type="image/x-icon" href="dndimages/favicon.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Baumans&Cinzel+Decorative:wght@400;700;900&family=Cinzel:wght@400;500;600;700;800;900&family=EB+Garamond:wght@400;500;600;700;800&family=Overlock+SC&family=MedievalSharp&display=swap">
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="css/statblock-style.css">
+    <!-- <link rel="stylesheet" type="text/css" href="css/statblock-style-default.css"> -->
+    <link rel="stylesheet" type="text/css" href="css/statblock-style-default.css">
     <link rel="stylesheet" type="text/css" href="css/statblock-page-style.css">
     <link rel="stylesheet" type="text/css" href="css/dnd-style.css">
     <link rel="stylesheet" type="text/css" href="css/libre-baskerville.css">
@@ -17,22 +22,11 @@
     <script src="js/dom-to-image.min.js"></script>
     <script src="js/statblock-script.js"></script>
 
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-145234284-1"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
-
-        gtag('config', 'UA-145234284-1');
-    </script>
-
 </head>
 
-<body id="stat-block-body" style="min-width: 1000px;">
+<body id="stat-block-body" style="min-width: 1000px;" onload="UpdateStatblockStyle(getCookie('style'))">
     <div class="container" style="text-align: center;">
         <div class="content">
-            <br>
             <h1>D&amp;D 5e Statblock Generator</h1>
             <p>Based on <a href="https://github.com/Tetra-cube/Tetra-cube.github.io">Tetra-cube D&D 5e Statblock
                     Generator</a>
@@ -42,6 +36,7 @@
                 <button onclick="TryPrint()">Printable Block</button>
                 <button onclick="TryImage()">View Image</button>
                 <button onclick="TryMarkdown()">View Markdown</button>
+                <button onclick="TrySaveClashFile()">Save Clash! Data</button>
                 <input id="file-upload" type="file" onChange="TryLoadFile();" hidden />
                 <br><br>
             <div id="monster-select-form">Monster Presets: <select id="monster-select">
@@ -144,6 +139,22 @@
                 <button id="left-separator-button" type="button" onclick="UpdateBlockFromVariables(1)">&lt;&lt;</button>
                 <button type="button" onclick="UpdateBlockFromVariables(0)">Update Statblock</button>
                 <button id="right-separator-button" type="button" onclick="UpdateBlockFromVariables(-1)">>></button>
+                <br>
+                <br>
+                <label for="statblock-style">
+                    "Statblock Style: "
+                    <br>
+                    <select id="style-statblock" onchange="UpdateStatblockStyle('')">
+                        <option value="default">Dungeons & Dragons - Default</option>
+                        <option value="kobold">Kobold Press - Creature Codex</option>
+                        <option value="middleearth">Cubicle 7 - Adventures in Middle-Earth</option>
+                        <option value="teal">Modiphius - Odyssey of the Dragonlords</option>
+                        <option value="purple">AAW Games - Rise of the Drow</option>
+                        <option value="techno">Monte Cook Games - Beasts of Flesh & Steel</option>
+                        <option value="plain">Black & White</option>
+                        <option value="dnd2024">Dungeons & Dragons - 2024 revision</option>
+                    </select>
+                </label>
                 <hr>
                 <table id="type-form">
                     <tr>

@@ -69,9 +69,61 @@ var mon = {
     separationPoint: 1
 };
 
+var clash = {
+    id: "",
+    tokenId: "",
+    isActive: 0,
+    initiative: 1,
+    unitName: "Monster",
+    unitSize: "medium",
+    unitType: "humanoid",
+    alignment: "any alignment",
+    maxHP: 4,
+    currentHP: 4,
+    armorClass: 10,
+    strScore: 10,
+    strSave: 0,
+    dexScore: 10,
+    dexSave: 0,
+    conScore: 10,
+    conSave: 0,
+    intScore: 10,
+    intSave: 0,
+    wisScore: 10,
+    wisSave: 0,
+    chaScore: 10,
+    chaSave: 0,
+    damageVulnerabilities: "",
+    damageImmunities: "",
+    damageResistances: "",
+    conditionImmunities: "",
+    challengeRating: "",
+    experiencePoints: 0,
+    standardActions: [],
+    legendaryActions: [],
+    specialAbilities: [],
+    spellActions: [],
+    reactions: [],
+    spellList: [],
+    senses: "passive Perception 10",
+    languages: "any one language (usually Common)",
+    speedWalk: 30,
+    speedFly: 0,
+    speedClimb: 0,
+    speedBurrow: 0,
+    speedSwim: 0,
+    dataSlug: "",
+    favorite: false
+};
+
 // Save function
 var TrySaveFile = () => {
     SavedData.SaveToFile();
+}
+
+// Save Clash file function
+var TrySaveClashFile = () => {
+    SavedData.SaveToClashFile();
 }
 
 // Upload file function
@@ -106,6 +158,105 @@ function UpdateBlockFromVariables(moveSeparationPoint) {
     UpdateStatblock(moveSeparationPoint);
 }
 
+function UpdateStatblockStyle(stylesheet) {
+    stylesheet = (stylesheet === '' ? document.getElementById('style-statblock').value : stylesheet)
+    var sheets = document.getElementsByTagName('link');
+    sheets[5].href = "css/statblock-style-" + stylesheet + ".css";
+    var statBlock = document.getElementsByClassName('stat-block');
+    var orangeBorder = document.getElementsByClassName('orange-border');
+    switch (stylesheet) {
+        case 'default':
+            statBlock[0].style.background = "none";
+            statBlock[0].style.backgroundImage = "url('../../dnd/dndimages/statblockparch.jpg')";
+            for (let index = 0; index < orangeBorder.length; index++) {
+                orangeBorder[index].style.backgroundImage = "url('../../dnd/dndimages/statblockbar.jpg')";
+                orangeBorder[index].style.backgroundColor = "#E69A28";
+            }
+            document.getElementById('style-statblock').selectedIndex = "0";
+            break;
+        case 'kobold':
+            statBlock[0].style.background = "#FFFFFF";
+            statBlock[0].style.backgroundImage = "none";
+            for (let index = 0; index < orangeBorder.length; index++) {
+                orangeBorder[index].style.backgroundImage = "none";
+                orangeBorder[index].style.backgroundColor = "#3B7244";
+            }
+            document.getElementById('style-statblock').selectedIndex = "1";
+            break;
+        case 'middleearth':
+            statBlock[0].style.background = "#FDF1DC";
+            statBlock[0].style.backgroundImage = "url('../../dnd/dndimages/statblockparch.jpg')";
+            for (let index = 0; index < orangeBorder.length; index++) {
+                orangeBorder[index].style.backgroundImage = "none";
+                orangeBorder[index].style.backgroundColor = "#3A291A";
+            }
+            document.getElementById('style-statblock').selectedIndex = "2";
+            break;
+        case 'teal':
+            statBlock[0].style.background = "none";
+            statBlock[0].style.backgroundImage = "url('../../dnd/dndimages/statblockparch.jpg')";
+            for (let index = 0; index < orangeBorder.length; index++) {
+                orangeBorder[index].style.backgroundImage = "none";
+                orangeBorder[index].style.backgroundColor = "#CFAD8D";
+            }
+            document.getElementById('style-statblock').selectedIndex = "3";
+            break;
+        case 'purple':
+            statBlock[0].style.background = "#FDF1DC";
+            statBlock[0].style.backgroundImage = "none";
+            for (let index = 0; index < orangeBorder.length; index++) {
+                orangeBorder[index].style.backgroundImage = "none";
+                orangeBorder[index].style.backgroundColor = "#6A0DAD";
+            }
+            document.getElementById('style-statblock').selectedIndex = "4";
+            break;
+        case 'techno':
+            statBlock[0].style.backgroundImage = "none";
+            statBlock[0].style.background = "linear-gradient(#FFFEFE, #E6C6BA)";
+            for (let index = 0; index < orangeBorder.length; index++) {
+                orangeBorder[index].style.backgroundImage = "none";
+                orangeBorder[index].style.backgroundColor = "#922610";
+            }
+            document.getElementById('style-statblock').selectedIndex = "5";
+            break;
+        case 'plain':
+            statBlock[0].style.background = "#FFFFFF";
+            statBlock[0].style.backgroundImage = "none";
+            for (let index = 0; index < orangeBorder.length; index++) {
+                orangeBorder[index].style.backgroundImage = "none";
+                orangeBorder[index].style.backgroundColor = "#3A291A";
+            }
+            document.getElementById('style-statblock').selectedIndex = "6";
+            break;
+        case 'dnd2024':
+            statBlock[0].style.background = "none";
+            statBlock[0].style.backgroundImage = "url('../../dnd/dndimages/statblockparch.jpg')";
+            for (let index = 0; index < orangeBorder.length; index++) {
+                orangeBorder[index].style.backgroundImage = "url('../../dnd/dndimages/statblockbar.jpg')";
+                orangeBorder[index].style.backgroundColor = "#E69A28";
+            }
+            document.getElementById('style-statblock').selectedIndex = "7";
+            break;
+    }
+    setCookie('style', stylesheet, '90');
+}
+
+function setCookie(key, value, expiry) {
+    var expires = new Date();
+    expires.setTime(expires.getTime() + (expiry * 24 * 60 * 60 * 1000));
+    document.cookie = key + '=' + value + ';expires=' + expires.toUTCString();
+}
+
+function getCookie(key) {
+    var keyValue = document.cookie.match('(^|;) ?' + key + '=([^;]*)(;|$)');
+    return keyValue ? keyValue[2] : 'default';
+}
+
+function eraseCookie(key) {
+    var keyValue = getCookie(key);
+    setCookie(key, keyValue, '-1');
+}
+
 // Functions for saving/loading data
 var SavedData = {
     // Saving
@@ -115,6 +266,10 @@ var SavedData = {
     SaveToFile: () => saveAs(new Blob([JSON.stringify(mon)], {
         type: "text/plain;charset=utf-8"
     }), mon.name.toLowerCase() + ".monster"),
+
+    SaveToClashFile: () => saveAs(new Blob([JSON.stringify(clash)], {
+        type: "text/plain;charset=utf-8"
+    }), clash.unitName.toLowerCase() + ".clash"),
 
     // Retrieving
 
@@ -255,6 +410,85 @@ function UpdateStatblock(moveSeparationPoint) {
     FormFunctions.ShowHideSeparatorInput();
 }
 
+
+function UpdateClashData() {
+
+    // Clash Owlbear Rodeo Plugin Data
+    // Name and Type
+    clash.unitName = StringFunctions.RemoveHtmlTags(mon.name);
+    clash.unitSize = StringFunctions.RemoveHtmlTags(mon.size).toLowerCase();
+    clash.unitType = mon.type.toLowerCase();
+    clash.alignment = mon.alignment.toLowerCase();
+
+    // Hit Points
+    clash.maxHP = MathFunctions.GetHitPoints();
+    clash.currentHP = MathFunctions.GetHitPoints();
+
+    // Armor Class
+    clash.armorClass = parseInt(mon.otherArmorDesc.split(" ")[0]);
+
+    // Stats
+    clash.strScore = mon.strPoints;
+    clash.dexScore = mon.dexPoints;
+    clash.conScore = mon.conPoints;
+    clash.intScore = mon.intPoints;
+    clash.wisScore = mon.wisPoints;
+    clash.chaScore = mon.chaPoints;
+    clash.strSave = MathFunctions.PointsToBonus(mon.strPoints);
+    clash.dexSave = MathFunctions.PointsToBonus(mon.dexPoints);
+    clash.conSave = MathFunctions.PointsToBonus(mon.conPoints);
+    clash.intSave = MathFunctions.PointsToBonus(mon.intPoints);
+    clash.wisSave = MathFunctions.PointsToBonus(mon.wisPoints);
+    clash.chaSave = MathFunctions.PointsToBonus(mon.chaPoints);
+
+    // Challenge Rating
+    clash.challengeRating = mon.challenge_rating;
+
+    // Speeds
+    clash.speedWalk = GetSpeed(mon.speed, "walk");
+    clash.speedFly = GetSpeed(mon.speed, "fly");
+    clash.speedClimb = GetSpeed(mon.speed, "climb");
+    clash.speedBurrow = GetSpeed(mon.speed, "burrow");
+    clash.speedSwim = GetSpeed(mon.speed, "swim");
+
+    // Damage Immunitites
+    clash.damageImmunities = mon.damage_immunities;
+
+    // Damage Vulnerabilities
+    clash.damageVulnerabilities = mon.damage_vulnerabilities;
+
+    // Damage Resistances
+    clash.damageResistances = mon.damage_resistances;
+
+    // Condition Immunities
+    clash.conditionImmunities = mon.condition_immunities;
+
+    // Standard Actions
+    clash.standardActions = mon.actions;
+
+    // Legendary Actions
+    clash.legendaryActions = mon.legendaries;
+
+    // Special Abilities
+    clash.specialAbilities = mon.abilities;
+
+    // Spell Actions
+    //clash.spellActions = null;
+
+    // Reactions
+    clash.reactions = mon.reactions;
+
+    // Spell List
+    clash.spellList = mon.spell_list;
+
+    // Senses
+    clash.senses = mon.senses;
+
+    // Languages
+    clash.languages = mon.languages;
+
+}
+
 // Function used by UpdateStatblock for abilities
 function AddToTraitList(traitsHTML, traitsArr, addElements, isLegendary = false, isLairRegional = false, isMythic = false) {
 
@@ -292,6 +526,7 @@ function ReplaceTags(desc) {
 
     matches.forEach(function (match) {
         const GetPoints = (pts) => data.statNames.includes(pts) ? MathFunctions.PointsToBonus(mon[pts + "Points"]) : null;
+        const GetScore = (score) => data.statNames.includes(score) ? parseInt(mon[score + "Points"]) : null;
         let readString = match[1].toLowerCase().replace(/ +/g, ' ').trim();
 
         if (readString.length > 0) {
@@ -306,6 +541,9 @@ function ReplaceTags(desc) {
                     desc = desc.replace(match[0], mon.pluralName);
                 else
                     desc = desc.replace(match[0], mon.name);
+            }
+            else if (readString == "prof") {
+                desc = desc.replace(match[0], CrFunctions.GetProf());
             }
             else {
                 let readPosition = 0,
@@ -328,6 +566,10 @@ function ReplaceTags(desc) {
                             bonus += CrFunctions.GetProf() + 8;
                             readPosition = 8;
                             type = "save";
+                        } else if (readString.substring(3, 9) == " score") {
+                            bonus = GetScore(readString.substring(0, 3)); //parseInt(mon[readString.substring(0, 3) + "Points"]);
+                            readPosition = 9;
+                            type = "score";
                         }
                     }
 
@@ -373,6 +615,9 @@ function ReplaceTags(desc) {
                     let replaceString = null;
                     switch (type) {
                         case "stat":
+                        case "score":
+                            replaceString = bonus;
+                            break;
                         case "atk":
                             replaceString = StringFunctions.BonusFormat(bonus);
                             break;
@@ -420,7 +665,13 @@ function TryMarkdown() {
             (Array.isArray(propertiesDisplayArr[index].arr) ? propertiesDisplayArr[index].arr.join(", ") : propertiesDisplayArr[index].arr),
             "<br>");
     }
-    markdown.push("> - **Challenge** ", mon.cr, " (", data.crs[mon.cr].pe, " PE)<br>>___");
+
+    if (mon.cr == "*")
+        markdown.push("> - **Challenge** ", mon.customCr, "<br>");
+    else
+        markdown.push("> - **Challenge** ", mon.cr, " (", data.crs[mon.cr].xp, " XP)<br>");
+
+    markdown.push("> - **Proficiency Bonus** +", mon.customProf, "<br>>___");
 
     if (mon.abilities.length > 0) markdown.push("<br>", GetTraitMarkdown(mon.abilities, false));
     if (mon.actions.length > 0) markdown.push("<br>> ### Actions<br>", GetTraitMarkdown(mon.actions, false));
@@ -470,6 +721,9 @@ function GetTraitMarkdown(traitArr, legendary = false, lairOrRegional = false) {
 var FormFunctions = {
     // Set the forms
     SetForms: function () {
+        // Shortened Name and Plural Name
+        $("#short-name-input").val(mon.shortName);
+        $("#plural-name-input").val(mon.pluralName);
         // Name and type
         $("#name-input").val(mon.name);
         $("#size-input").val(mon.size);
@@ -541,8 +795,6 @@ var FormFunctions = {
         $("#telepathy-input").val(mon.telepathy);
 
         // Abilities
-        $("#short-name-input").val(mon.shortName);
-        $("#plural-name-input").val(mon.pluralName);
         this.MakeDisplayList("abilities", false, true);
         this.MakeDisplayList("actions", false, true);
         this.MakeDisplayList("additionalactions", false, true);
@@ -1830,6 +2082,16 @@ var MathFunctions = {
 
     // Compute ability bonuses based on ability scores
     PointsToBonus: (points) => Math.floor(points / 2) - 5,
+
+    // Get the number of HP
+    GetHitPoints: function () {
+        if (mon.customHP)
+            return parseInt(mon.hpText.split(" ")[0]);
+        let conBonus = MathFunctions.PointsToBonus(mon.conPoints);
+        hitDieSize = data.sizes[mon.size].hitDie,
+            avgHP = Math.floor(mon.hitDice * ((hitDieSize + 1) / 2)) + (mon.hitDice * conBonus);
+        return Math.max(avgHP, 1);
+    },
 
     // Compute armor class
     GetAC: function (armorNameCheck) {
