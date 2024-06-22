@@ -59,12 +59,21 @@
                             <polyline points="0,0 400,2.5 0,5"></polyline>
                         </svg>
                         <div class="top-stats">
-                            <div class="property-line first">
-                                <h4>Clase de Armadura</h4>
-                                <p id="armor-class"></p>
-                            </div> <!-- property line -->
+                            <div class="ca-initiative-container">
+
+                                <div class="property-line ca-container">
+                                    <h4 id="normal-armor-class">Clase de Armadura</h4>
+                                    <h4 id="dnd2024-armor-class">CA</h4>
+                                    <p id="armor-class"></p>
+                                </div> <!-- property line -->
+                                <div id="dnd2024-initiative" class="property-line">
+                                    <h4>Iniciativa</h4>
+                                    <p id="inipts"></p>
+                                </div>
+                            </div>
                             <div class="property-line">
-                                <h4>Puntos de Golpe</h4>
+                                <h4 id="normal-HP">Puntos de Golpe</h4>
+                                <h4 id="dnd2024-HP">PG</h4>
                                 <p id="hit-points"></p>
                             </div> <!-- property line -->
                             <div class="property-line last">
@@ -74,7 +83,121 @@
                             <svg height="5" width="100%" class="tapered-rule">
                                 <polyline points="0,0 400,2.5 0,5"></polyline>
                             </svg>
-                            <div class="scores">
+                            <div id="scores-2024" class="scores-2024">
+                                <div class="scores-line-2024">
+                                    <div class="scores-characteristic-2024">
+                                        <div class="scores-titles-wrapper">
+
+                                            <p>MOD</p>
+                                            <p>SAVE</p>
+                                        </div>
+                                        <div class="scores-pnts-wrapper">
+
+                                            <div class="scores-pnts-2024 first-line-2024">
+                                                <h4>Fue</h4>
+                                                <p id="2024fuepts">6</p>
+                                            </div>
+                                            <div class="mod-sthr-first">
+                                                <p id="2024fuemod">-2</p>
+                                                <p id="2024fuesthr">-2</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="scores-characteristic-2024">
+                                        <div class="scores-titles-wrapper">
+
+                                            <p>MOD</p>
+                                            <p>SAVE</p>
+                                        </div>
+                                        <div class="scores-pnts-wrapper">
+
+                                            <div class="scores-pnts-2024 first-line-2024">
+                                                <h4>Des</h4>
+                                                <p id="2024despts"></p>
+                                            </div>
+                                            <div class="mod-sthr-first">
+                                                <p id="2024desmod">-2</p>
+                                                <p id="2024dessthr">-2</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="scores-characteristic-2024">
+                                        <div class="scores-titles-wrapper">
+
+                                            <p>MOD</p>
+                                            <p>SAVE</p>
+                                        </div>
+                                        <div class="scores-pnts-wrapper">
+
+                                            <div class="scores-pnts-2024 first-line-2024">
+                                                <h4>Con</h4>
+                                                <p id="2024conpts"></p>
+                                            </div>
+                                            <div class="mod-sthr-first">
+                                                <p id="2024conmod">-2</p>
+                                                <p id="2024consthr">-2</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="scores-line-2024">
+                                    <div class="scores-characteristic-2024">
+                                        <div class="scores-titles-wrapper">
+
+                                            <p>MOD</p>
+                                            <p>SAVE</p>
+                                        </div>
+                                        <div class="scores-pnts-wrapper">
+
+                                            <div class="scores-pnts-2024 second-line-2024">
+                                                <h4>Int</h4>
+                                                <p id="2024intpts"></p>
+                                            </div>
+                                            <div class="mod-sthr-second">
+                                                <p id="2024intmod">-2</p>
+                                                <p id="2024intsthr">-2</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="scores-characteristic-2024">
+                                        <div class="scores-titles-wrapper">
+
+                                            <p>MOD</p>
+                                            <p>SAVE</p>
+                                        </div>
+                                        <div class="scores-pnts-wrapper">
+
+                                            <div class="scores-pnts-2024 second-line-2024">
+                                                <h4>Sab</h4>
+                                                <p id="2024sabpts"></p>
+                                            </div>
+                                            <div class="mod-sthr-second">
+                                                <p id="2024sabmod">-2</p>
+                                                <p id="2024sabsthr">-2</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="scores-characteristic-2024">
+                                        <div class="scores-titles-wrapper">
+
+                                            <p>MOD</p>
+                                            <p>SAVE</p>
+                                        </div>
+                                        <div class="scores-pnts-wrapper">
+
+                                            <div class="scores-pnts-2024 second-line-2024">
+                                                <h4>Car</h4>
+                                                <p id="2024carpts"></p>
+                                            </div>
+                                            <div class="mod-sthr-second">
+                                                <p id="2024carmod">-2</p>
+                                                <p id="2024carsthr">-2</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="scores" class="scores">
                                 <div class="scores-strength">
                                     <h4>FUE</h4>
                                     <p id="fuepts"></p>
@@ -108,6 +231,10 @@
                                 <h4>Bonificador por Competencia</h4>
                                 <p id="proficiency-bonus"></p>
                             </div>
+                            <div id="challenge-rating-line-2024" class="property-line last">
+                                <h4>VD</h4>
+                                <p id="challenge-rating-2024"></p>
+                            </div> <!-- property line -->
                             <div id="challenge-rating-line" class="property-line last">
                                 <h4>Desafío</h4>
                                 <p id="challenge-rating"></p>

@@ -152,6 +152,41 @@ function TryImage() {
         });
 }
 
+function ShowHideDnD2024(style) {
+    if (style === "dnd2024") {
+        $("#dnd2024-armor-class").show();
+        $("#dnd2024-initiative").show();
+        $("#dnd2024-HP").show();
+        $("#scores-2024").show();
+        $("#challenge-rating-line-2024").show();
+        $("#rasgos-2024").show();
+        $("#normal-armor-class").hide();
+        $("#normal-HP").hide();
+        $("#scores").hide();
+        if (mon.sthrows.length != 0) {
+            $('#properties-list').find('div:first').hide();
+        }
+        $("#proficiency-bonus-line").hide();
+        $("#challenge-rating-line").hide();
+    } else {
+        $("#dnd2024-armor-class").hide();
+        $("#dnd2024-initiative").hide();
+        $("#dnd2024-HP").hide();
+        $("#scores-2024").hide();
+        $("#challenge-rating-line-2024").hide();
+        $("#rasgos-2024").hide();
+        $("#normal-HP").show();
+        $("#normal-armor-class").show();
+        $("#scores").show();
+        if (mon.sthrows.length != 0) {
+            $('#properties-list').find('div:first').show();
+        }
+        $("#proficiency-bonus-line").show();
+        $("#challenge-rating-line").show();
+
+    }
+}
+
 // Update the main stat block from form variables
 function UpdateBlockFromVariables(moveSeparationPoint) {
     GetVariablesFunctions.GetAllVariables();
@@ -163,78 +198,118 @@ function UpdateStatblockStyle(stylesheet) {
     var sheets = document.getElementsByTagName('link');
     sheets[5].href = "css/statblock-style-" + stylesheet + ".css";
     var statBlock = document.getElementsByClassName('stat-block');
+    var statBlockWrapper = document.getElementById('stat-block-wrapper');
     var orangeBorder = document.getElementsByClassName('orange-border');
     switch (stylesheet) {
         case 'default':
+            statBlockWrapper.style.borderRadius = "none";
+            statBlock[0].style.borderStyle = "none";
+            statBlock[0].style.borderColor = "none";
             statBlock[0].style.background = "none";
             statBlock[0].style.backgroundImage = "url('../../dnd/dndimages/statblockparch.jpg')";
+            statBlock[0].style.borderRadius = "none";
             for (let index = 0; index < orangeBorder.length; index++) {
                 orangeBorder[index].style.backgroundImage = "url('../../dnd/dndimages/statblockbar.jpg')";
                 orangeBorder[index].style.backgroundColor = "#E69A28";
             }
+            ShowHideDnD2024("default");
             document.getElementById('style-statblock').selectedIndex = "0";
             break;
         case 'kobold':
+            statBlockWrapper.style.borderRadius = "none";
+            statBlock[0].style.borderStyle = "none";
+            statBlock[0].style.borderColor = "none";
             statBlock[0].style.background = "#FFFFFF";
             statBlock[0].style.backgroundImage = "none";
+            statBlock[0].style.borderRadius = "none";
             for (let index = 0; index < orangeBorder.length; index++) {
                 orangeBorder[index].style.backgroundImage = "none";
                 orangeBorder[index].style.backgroundColor = "#3B7244";
             }
+            ShowHideDnD2024("kobold");
             document.getElementById('style-statblock').selectedIndex = "1";
             break;
         case 'middleearth':
+            statBlockWrapper.style.borderRadius = "none";
+            statBlock[0].style.borderStyle = "none";
+            statBlock[0].style.borderColor = "none";
             statBlock[0].style.background = "#FDF1DC";
             statBlock[0].style.backgroundImage = "url('../../dnd/dndimages/statblockparch.jpg')";
+            statBlock[0].style.borderRadius = "none";
             for (let index = 0; index < orangeBorder.length; index++) {
                 orangeBorder[index].style.backgroundImage = "none";
                 orangeBorder[index].style.backgroundColor = "#3A291A";
             }
+            ShowHideDnD2024("middleearth");
             document.getElementById('style-statblock').selectedIndex = "2";
             break;
         case 'teal':
+            statBlockWrapper.style.borderRadius = "none";
+            statBlock[0].style.borderStyle = "none";
+            statBlock[0].style.borderColor = "none";
             statBlock[0].style.background = "none";
             statBlock[0].style.backgroundImage = "url('../../dnd/dndimages/statblockparch.jpg')";
+            statBlock[0].style.borderRadius = "none";
             for (let index = 0; index < orangeBorder.length; index++) {
                 orangeBorder[index].style.backgroundImage = "none";
                 orangeBorder[index].style.backgroundColor = "#CFAD8D";
             }
+            ShowHideDnD2024("teal");
             document.getElementById('style-statblock').selectedIndex = "3";
             break;
         case 'purple':
+            statBlockWrapper.style.borderRadius = "none";
+            statBlock[0].style.borderStyle = "none";
+            statBlock[0].style.borderColor = "none";
             statBlock[0].style.background = "#FDF1DC";
             statBlock[0].style.backgroundImage = "none";
+            statBlock[0].style.borderRadius = "none";
             for (let index = 0; index < orangeBorder.length; index++) {
                 orangeBorder[index].style.backgroundImage = "none";
                 orangeBorder[index].style.backgroundColor = "#6A0DAD";
             }
+            ShowHideDnD2024("purple");
             document.getElementById('style-statblock').selectedIndex = "4";
             break;
         case 'techno':
+            statBlockWrapper.style.borderRadius = "none";
+            statBlock[0].style.borderStyle = "none";
+            statBlock[0].style.borderColor = "none";
             statBlock[0].style.backgroundImage = "none";
             statBlock[0].style.background = "linear-gradient(#FFFEFE, #E6C6BA)";
+            statBlock[0].style.borderRadius = "none";
             for (let index = 0; index < orangeBorder.length; index++) {
                 orangeBorder[index].style.backgroundImage = "none";
                 orangeBorder[index].style.backgroundColor = "#922610";
             }
+            ShowHideDnD2024("techno");
             document.getElementById('style-statblock').selectedIndex = "5";
             break;
         case 'plain':
+            statBlockWrapper.style.borderRadius = "none";
+            statBlock[0].style.borderStyle = "none";
+            statBlock[0].style.borderColor = "none";
             statBlock[0].style.background = "#FFFFFF";
             statBlock[0].style.backgroundImage = "none";
+            statBlock[0].style.borderRadius = "none";
             for (let index = 0; index < orangeBorder.length; index++) {
                 orangeBorder[index].style.backgroundImage = "none";
                 orangeBorder[index].style.backgroundColor = "#3A291A";
             }
+            ShowHideDnD2024("plain");
             document.getElementById('style-statblock').selectedIndex = "6";
             break;
         case 'dnd2024':
-            statBlock[0].style.background = "none";
-            statBlock[0].style.backgroundImage = "url('../../dnd/dndimages/statblockparch.jpg')";
+            statBlockWrapper.style.borderRadius = "10px";
+            statBlock[0].style.background = "#F2EDE9";
+            statBlock[0].style.borderRadius = "10px";
+            statBlock[0].style.borderStyle = "double";
+            statBlock[0].style.borderColor = "#8f8c97";
             for (let index = 0; index < orangeBorder.length; index++) {
                 orangeBorder[index].style.backgroundImage = "url('../../dnd/dndimages/statblockbar.jpg')";
                 orangeBorder[index].style.backgroundColor = "#E69A28";
             }
+            ShowHideDnD2024("dnd2024");
             document.getElementById('style-statblock').selectedIndex = "7";
             break;
     }
@@ -346,6 +421,67 @@ function UpdateStatblock(moveSeparationPoint) {
     setPts("#sabpts", mon.sabPoints);
     setPts("#carpts", mon.carPoints);
 
+    let set2024Pts = (id, pts) =>
+        $(id).html(pts);
+    set2024Pts("#2024fuepts", mon.fuePoints);
+    set2024Pts("#2024despts", mon.desPoints);
+    set2024Pts("#2024conpts", mon.conPoints);
+    set2024Pts("#2024intpts", mon.intPoints);
+    set2024Pts("#2024sabpts", mon.sabPoints);
+    set2024Pts("#2024carpts", mon.carPoints);
+
+    let set2024Mods = (id, pts) =>
+        $(id).html(StringFunctions.RemoveHtmlTags(StringFunctions.BonusFormat(MathFunctions.PointsToBonus(pts))));
+    set2024Mods("#2024fuemod", mon.fuePoints);
+    set2024Mods("#2024desmod", mon.desPoints);
+    set2024Mods("#2024conmod", mon.conPoints);
+    set2024Mods("#2024intmod", mon.intPoints);
+    set2024Mods("#2024sabmod", mon.sabPoints);
+    set2024Mods("#2024carmod", mon.carPoints);
+
+    let set2024Sthr = (id, pts) =>
+        $(id).html(StringFunctions.RemoveHtmlTags(StringFunctions.BonusFormat(MathFunctions.PointsToBonus(pts) + (data.crs[mon.cr].prof))));
+
+    if (mon.sthrows.find(e => e.name === "fue")) {
+        set2024Sthr("#2024fuesthr", mon.fuePoints);
+    } else {
+        set2024Mods("#2024fuesthr", mon.fuePoints);
+    }
+
+    if (mon.sthrows.find(e => e.name === "des")) {
+        set2024Sthr("#2024dessthr", mon.desPoints);
+    } else {
+        set2024Mods("#2024dessthr", mon.desPoints);
+    }
+
+    if (mon.sthrows.find(e => e.name === "con")) {
+        set2024Sthr("#2024consthr", mon.conPoints);
+    } else {
+        set2024Mods("#2024consthr", mon.conPoints);
+    }
+
+    if (mon.sthrows.find(e => e.name === "int")) {
+        set2024Sthr("#2024intsthr", mon.intPoints);
+    } else {
+        set2024Mods("#2024intsthr", mon.intPoints);
+    }
+
+    if (mon.sthrows.find(e => e.name === "sab")) {
+        set2024Sthr("#2024sabsthr", mon.sabPoints);
+    } else {
+        set2024Mods("#2024sabsthr", mon.sabPoints);
+    }
+
+    if (mon.sthrows.find(e => e.name === "car")) {
+        set2024Sthr("#2024carsthr", mon.carPoints);
+    } else {
+        set2024Mods("#2024carsthr", mon.carPoints);
+    }
+
+    //Initiative
+    let setIni = (id, pts) => $(id).html(StringFunctions.RemoveHtmlTags(StringFunctions.BonusFormat(MathFunctions.PointsToBonus(pts))) + " (" + (MathFunctions.PointsToBonus(pts) + 10) + ")");
+    setIni("#inipts", mon.desPoints);
+
     let propertiesDisplayArr = StringFunctions.GetPropertiesDisplayArr();
 
     // Display All Properties (except CR)
@@ -360,6 +496,11 @@ function UpdateStatblock(moveSeparationPoint) {
     if (crDisplay && crDisplay.length > 0) {
         $("#challenge-rating-line").show();
         $("#challenge-rating").html(StringFunctions.FormatString(StringFunctions.RemoveHtmlTags(crDisplay)));
+        if (mon.cr == "*") {
+            $("#challenge-rating-2024").html(StringFunctions.FormatString(StringFunctions.RemoveHtmlTags(mon.customCr.trim()) + "; BC " + ("+" + StringFunctions.RemoveHtmlTags(CrFunctions.GetProf()))));
+        } else {
+            $("#challenge-rating-2024").html(StringFunctions.FormatString(StringFunctions.RemoveHtmlTags(mon.cr + " (" + data.crs[mon.cr].pe + " PE; BC " + ("+" + StringFunctions.RemoveHtmlTags(CrFunctions.GetProf()) + ")"))));
+        }
         $("#proficiency-bonus-line").show();
         $("#proficiency-bonus").html("+" + StringFunctions.RemoveHtmlTags(CrFunctions.GetProf()));
     }
@@ -367,10 +508,11 @@ function UpdateStatblock(moveSeparationPoint) {
         $("#challenge-rating-line").hide();
         $("#proficiency-bonus-line").hide();
     }
+
     // Abilities
     let traitsHTML = [];
 
-    if (mon.abilities.length > 0) AddToTraitList(traitsHTML, mon.abilities);
+    if (mon.abilities.length > 0) AddToTraitList(traitsHTML, mon.abilities, "<h3 id='rasgos-2024'>Rasgos</h3>");
     if (mon.actions.length > 0) AddToTraitList(traitsHTML, mon.actions, "<h3>Acciones</h3>");
     if (mon.additionalactions.length > 0) AddToTraitList(traitsHTML, mon.additionalactions, "<h3>Acciones Adicionales</h3>");
     if (mon.reactions.length > 0) AddToTraitList(traitsHTML, mon.reactions, "<h3>Reacciones</h3>");
@@ -860,6 +1002,7 @@ var FormFunctions = {
         else
             $(".normal-speed-col").show();
     },
+
 
     ShowHideConditionOther: function () {
         this.ShowHideHtmlElement("#other-condition-input", $("#conditions-input").val() == "*");
@@ -1620,6 +1763,7 @@ var GetVariablesFunctions = {
 
         // Non-alphabetical ordering
         for (let index = 0; index < mon.sthrows.length; index++) {
+            console.log(mon.sthrows);
             if (mon.sthrows[index].name == sthrowName) return;
             if (mon.sthrows[index].order > sthrowData.order) {
                 mon.sthrows.splice(index, 0, sthrowData)
