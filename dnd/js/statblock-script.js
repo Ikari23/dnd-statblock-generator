@@ -206,10 +206,10 @@ function UpdateStatblockStyle(stylesheet) {
             statBlock[0].style.borderStyle = "none";
             statBlock[0].style.borderColor = "none";
             statBlock[0].style.background = "none";
-            statBlock[0].style.backgroundImage = "url('../../dnd/dndimages/statblockparch.jpg')";
+            statBlock[0].style.backgroundImage = "url('../dnd/dndimages/statblockparch.jpg')";
             statBlock[0].style.borderRadius = "none";
             for (let index = 0; index < orangeBorder.length; index++) {
-                orangeBorder[index].style.backgroundImage = "url('../../dnd/dndimages/statblockbar.jpg')";
+                orangeBorder[index].style.backgroundImage = "url('../dnd/dndimages/statblockbar.jpg')";
                 orangeBorder[index].style.backgroundColor = "#E69A28";
             }
             ShowHideDnD2024("default");
@@ -234,7 +234,7 @@ function UpdateStatblockStyle(stylesheet) {
             statBlock[0].style.borderStyle = "none";
             statBlock[0].style.borderColor = "none";
             statBlock[0].style.background = "#FDF1DC";
-            statBlock[0].style.backgroundImage = "url('../../dnd/dndimages/statblockparch.jpg')";
+            statBlock[0].style.backgroundImage = "url('../dnd/dndimages/statblockparch.jpg')";
             statBlock[0].style.borderRadius = "none";
             for (let index = 0; index < orangeBorder.length; index++) {
                 orangeBorder[index].style.backgroundImage = "none";
@@ -248,7 +248,7 @@ function UpdateStatblockStyle(stylesheet) {
             statBlock[0].style.borderStyle = "none";
             statBlock[0].style.borderColor = "none";
             statBlock[0].style.background = "none";
-            statBlock[0].style.backgroundImage = "url('../../dnd/dndimages/statblockparch.jpg')";
+            statBlock[0].style.backgroundImage = "url('../dnd/dndimages/statblockparch.jpg')";
             statBlock[0].style.borderRadius = "none";
             for (let index = 0; index < orangeBorder.length; index++) {
                 orangeBorder[index].style.backgroundImage = "none";
