@@ -28,22 +28,22 @@
     <div class="container" style="text-align: center;">
         <div class="content">
             <h1>D&amp;D 5e Statblock Generator</h1>
-            <p>Based on <a href="https://github.com/Tetra-cube/Tetra-cube.github.io">Tetra-cube D&D 5e Statblock
+            <p>Basado en <a href="https://github.com/Tetra-cube/Tetra-cube.github.io">Tetra-cube D&D 5e Statblock
                     Generator</a>
                 <br>
-                <button onclick="TrySaveFile()">Save Statblock</button>
-                <button onclick="LoadFilePrompt()">Load Statblock</button>
-                <button onclick="TryPrint()">Printable Block</button>
-                <button onclick="TryImage()">View Image</button>
-                <button onclick="TryMarkdown()">View Markdown</button>
-                <button onclick="TrySaveClashFile()">Save Clash! Data</button>
+                <button onclick="TrySaveFile()">Guardar Perfil</button>
+                <button onclick="LoadFilePrompt()">Cargar Perfil</button>
+                <button onclick="TryPrint()">Perfil Imprimible</button>
+                <button onclick="TryImage()">Ver Imagen</button>
+                <button onclick="TryMarkdown()">Ver Markdown</button>
+                <button onclick="TrySaveClashFile()">Guardar Datos de Clash!</button>
                 <input id="file-upload" type="file" onChange="TryLoadFile();" hidden />
                 <br><br>
-            <div id="monster-select-form">Monster Presets: <select id="monster-select">
-                    <option value="">-Select-</option>
-                    <option value="default">Restore Default</option>
-                </select> <button type="button" id="monster-select-button" onclick="InputFunctions.GetPreset()">Use
-                    Preset</button></div>
+            <div id="monster-select-form">Monstruos Predefinidos: <select id="monster-select">
+                    <option value="">-Seleccionar-</option>
+                    <option value="default">Restablecer por Defecto</option>
+                </select> <button type="button" id="monster-select-button" onclick="InputFunctions.GetPreset()">Usar
+                    Predefinido</button></div>
             <br>
 
             <!-- The Actual Stat Block -->
@@ -269,7 +269,7 @@
                 <br>
                 <br>
                 <label for="statblock-style">
-                    "Statblock Style: "
+                    Estilo de Perfil:
                     <br>
                     <select id="style-statblock" onchange="UpdateStatblockStyle('')">
                         <option value="default">Dungeons & Dragons - Default</option>
@@ -324,7 +324,7 @@
                             </label>
                         </td>
                         <td>
-                            <label for="tag-input">Tag: <br>
+                            <label for="tag-input">Etiqueta: <br>
                                 <input id="tag-input" type="text"></label>
                         </td>
                         <td>
@@ -612,6 +612,9 @@
                                 pies</label><br>
                             <div id="blind-box-note" class="box-note"><label for="blindness-input">(Ciego más allá:
                                     <input type="checkbox" id="blindness-input">)</label></div>
+                            <div id="blind-box-custom-note" class="box-note"><label
+                                    for="blindness-custom-input">(Personalizado:
+                                    <input type="checkbox" id="blindness-custom-input">)</label></div>
                         </td>
                         <td>
                             <label for="darkvision-input">Visión en la oscuridad: <input type="number"
@@ -729,70 +732,72 @@
                 <div><textarea id="abilities-desc-input" style="height: 10em;"></textarea></div>
                 <div>
                     <button type="button" id="add-ability-button"
-                        onclick="InputFunctions.AddAbilityInput('abilities')">Add Ability</button>
-                    <button type="button" id="add-action-button" onclick="InputFunctions.AddAbilityInput('actions')">Add
-                        Action</button>
+                        onclick="InputFunctions.AddAbilityInput('abilities')">Añadir Atributo</button>
+                    <button type="button" id="add-action-button"
+                        onclick="InputFunctions.AddAbilityInput('actions')">Añadir Acción</button>
                     <button type="button" id="add-additional-action-button"
-                        onclick="InputFunctions.AddAbilityInput('additionalactions')">Add
-                        Additional action</button>
+                        onclick="InputFunctions.AddAbilityInput('additionalactions')">Añadir Acción Adicional</button>
                     <button type="button" id="add-reaction-button"
-                        onclick="InputFunctions.AddAbilityInput('reactions')">Add Reaction</button>
+                        onclick="InputFunctions.AddAbilityInput('reactions')">Añadir Reacción</button>
                     <button type="button" id="add-legendary-button"
-                        onclick="InputFunctions.AddAbilityInput('legendaries')">Add Legendary Action</button>
-                    <button type="button" id="add-mythic-button" onclick="InputFunctions.AddAbilityInput('mythics')">Add
-                        Mythic Action</button>
-                    <button type="button" id="add-lair-button" onclick="InputFunctions.AddAbilityInput('lairs')">Add
-                        Lair Action</button>
+                        onclick="InputFunctions.AddAbilityInput('legendaries')">Añadir Acción Legendaria</button>
+                    <button type="button" id="add-mythic-button"
+                        onclick="InputFunctions.AddAbilityInput('mythics')">Añadir Acción Mítica</button>
+                    <button type="button" id="add-lair-button" onclick="InputFunctions.AddAbilityInput('lairs')">Añadir
+                        Acción en Guarida</button>
                     <button type="button" id="add-regional-button"
-                        onclick="InputFunctions.AddAbilityInput('regionals')">Add Regional Effect</button>
+                        onclick="InputFunctions.AddAbilityInput('regionals')">Añadir Efecto Regional</button>
                 </div>
                 <div>
                     <select id="common-ability-input"></select>
                     <button type="button" id="add-common-ability-button"
-                        onclick="InputFunctions.AddCommonAbilityInput()">Use Preset</button>
+                        onclick="InputFunctions.AddCommonAbilityInput()">Usar Predefinido</button>
                 </div>
                 <div>
-                    <label for="format-helper-checkbox">Show Formatting Help: <input type="checkbox"
+                    <label for="format-helper-checkbox">Mostrar Ayuda de Formato: <input type="checkbox"
                             id="format-helper-checkbox" onclick="FormFunctions.ShowHideFormatHelper()"></label>
                 </div>
                 <div id="format-helper" style="text-align: left; padding: 0 2rem;">
                     <br>
-                    <div>Use _ to italicize and ** to bold. For Spellcasting lists, use > to reverse-indent.</div>
+                    <div>Utiliza _ para usar la cursiva y ** para la negrita. Para las listas de Lanzamiento de
+                        Conjuros, utiliza > para poner la identación inversa.</div>
                     <br>
-                    <div><b>[MON]</b>: Shows the monster's name.</div>
-                    <div><b>[CAR]</b>: Shows the monster's charisma modifier.</div>
-                    <div><b>[3D6]</b>: Computes 3d6.</div>
-                    <div><b>[FUE ATK]</b>: Calculates the modifier to the monster's attack roll for a strength-based
-                        attack.</div>
-                    <div><b>[DES 2D8]</b>: Calculates the damage roll for a dexterity-based attack with damage dice 2d8.
+                    <div><b>[MON]</b>: Muestra el nombre del monstruo.</div>
+                    <div><b>[CAR]</b>: Muestra el modificador de Carisma del monstruo.</div>
+                    <div><b>[3D6]</b>: Computa 3d6.</div>
+                    <div><b>[FUE ATK]</b>: Calcula el modificador de la tirada de ataque de ataques basados en Fuerza
+                        del monstruo.</div>
+                    <div><b>[DES 2D8]</b>: Calcula la tirada de daño para los ataques basados en Destreza con 2d8 dados
+                        de daño.
                     </div>
-                    <div><b>[SAB SAVE]</b>: Calculates the save DC vs the monster's wisdom.</div>
-                    <div><b>[3D6 + 1], [FUE ATK - 2], [SAB SAVE + 3]</b>: Adds a modifier to the given values.</div>
+                    <div><b>[SAB SAVE]</b>: Calcula la CD de la tirada de salvación vs la Sabiduría del monstruo.</div>
+                    <div><b>[3D6 + 1], [FUE ATK - 2], [SAB SAVE + 3]</b>: Añade un modificador para los valores
+                        obtenidos.</div>
                     <br>
                 </div>
                 <div style="text-align: left; min-height: 5rem;">
-                    <div id="abilities-input-section"><b>Abilities:</b><br>
+                    <div id="abilities-input-section"><b>Atributos:</b><br>
                         <ul id="abilities-input-list" class="statblock-list"></ul>
                     </div>
-                    <div id="actions-input-section"><b>Actions:</b><br>
+                    <div id="actions-input-section"><b>Acciones:</b><br>
                         <ul id="actions-input-list" class="statblock-list"></ul>
                     </div>
-                    <div id="additionalactions-input-section"><b>Additional Actions:</b><br>
+                    <div id="additionalactions-input-section"><b>Acciones Adicionales:</b><br>
                         <ul id="additionalactions-input-list" class="statblock-list"></ul>
                     </div>
-                    <div id="reactions-input-section"><b>Reactions:</b><br>
+                    <div id="reactions-input-section"><b>Reacciones:</b><br>
                         <ul id="reactions-input-list" class="statblock-list"></ul>
                     </div>
-                    <div id="legendaries-input-section"><b>Acciones legendarias:</b><br>
+                    <div id="legendaries-input-section"><b>Acciones Legendarias:</b><br>
                         <ul id="legendaries-input-list" class="statblock-list"></ul>
                     </div>
                     <div id="mythics-input-section"><b>Acciones Míticas:</b><br>
                         <ul id="mythics-input-list" class="statblock-list"></ul>
                     </div>
-                    <div id="lairs-input-section"><b>Lair Actions:</b><br>
+                    <div id="lairs-input-section"><b>Acciones en Guarida:</b><br>
                         <ul id="lairs-input-list" class="statblock-list"></ul>
                     </div>
-                    <div id="regionals-input-section"><b>Regional Effects:</b><br>
+                    <div id="regionals-input-section"><b>Efectos Regionales:</b><br>
                         <ul id="regionals-input-list" class="statblock-list"></ul>
                     </div>
                 </div>
