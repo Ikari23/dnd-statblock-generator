@@ -268,3 +268,11 @@
 #proficiency-bonus-line {
     float: right;
 }
+
+.inmunidades {
+    display: none;
+}
+
+#challenge-rating-line-2024 {
+    display: none;
+}

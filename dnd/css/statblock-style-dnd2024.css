@@ -11,7 +11,7 @@
     display: inline-block;
     vertical-align: top;
     width: 400px;
-    background: #FDF1DC;
+    background: #EFEFE7 !important;
     background-size: cover;
     background-position: center;
     background-image: url('../dndimages/statblockparch.jpg');
@@ -322,15 +322,15 @@
 }
 
 .first-line-2024 {
-    background-color: #BAB5B2;
+    background-color: #EDE6DE;
 }
 
 .second-line-2024 {
-    background-color: #A6ADA6;
+    background-color: #DBDBD3;
 }
 
 .mod-sthr-first {
-    background-color: #ADAAA3;
+    background-color: #D9D0C7;
     display: flex;
     max-height: 24px;
 }
@@ -343,7 +343,7 @@
 
 
 .mod-sthr-second {
-    background-color: #A2A3A3;
+    background-color: #C9C9C7;
     display: flex;
     max-height: 24px;
 }
@@ -375,4 +375,25 @@
 
 .ca-container {
     max-width: 200px;
+    min-width: 155px;
+}
+
+.tiradasDeSalvacion {
+    display: none;
+}
+
+.inmunidadADano {
+    display: none;
+}
+
+.inmunidadAEstados {
+    display: none;
+}
+
+#challenge-rating-line {
+    display: none;
+}
+
+#proficiency-bonus-line {
+    display: none;
 }

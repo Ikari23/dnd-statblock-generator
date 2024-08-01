@@ -66,7 +66,8 @@ var mon = {
     shortName: "",
     pluralName: "",
     doubleColumns: false,
-    separationPoint: 1
+    separationPoint: 1,
+    iniPoints: "+1 (11)"
 };
 
 var clash = {
@@ -158,31 +159,19 @@ function ShowHideDnD2024(style) {
         $("#dnd2024-initiative").show();
         $("#dnd2024-HP").show();
         $("#scores-2024").show();
-        $("#challenge-rating-line-2024").show();
         $("#rasgos-2024").show();
         $("#normal-armor-class").hide();
         $("#normal-HP").hide();
         $("#scores").hide();
-        if (mon.sthrows.length != 0) {
-            $('#properties-list').find('div:first').hide();
-        }
-        $("#proficiency-bonus-line").hide();
-        $("#challenge-rating-line").hide();
     } else {
         $("#dnd2024-armor-class").hide();
         $("#dnd2024-initiative").hide();
         $("#dnd2024-HP").hide();
         $("#scores-2024").hide();
-        $("#challenge-rating-line-2024").hide();
         $("#rasgos-2024").hide();
         $("#normal-HP").show();
         $("#normal-armor-class").show();
         $("#scores").show();
-        if (mon.sthrows.length != 0) {
-            $('#properties-list').find('div:first').show();
-        }
-        $("#proficiency-bonus-line").show();
-        $("#challenge-rating-line").show();
 
     }
 }
@@ -439,8 +428,10 @@ function UpdateStatblock(moveSeparationPoint) {
     set2024Mods("#2024sabmod", mon.sabPoints);
     set2024Mods("#2024carmod", mon.carPoints);
 
-    let set2024Sthr = (id, pts) =>
-        $(id).html(StringFunctions.RemoveHtmlTags(StringFunctions.BonusFormat(MathFunctions.PointsToBonus(pts) + (data.crs[mon.cr].prof))));
+    let set2024Sthr = (id, pts) => {
+        $(id).html(StringFunctions.RemoveHtmlTags(StringFunctions.BonusFormat(MathFunctions.PointsToBonus(pts) + (CrFunctions.GetProf()))));
+
+    }
 
     if (mon.sthrows.find(e => e.name === "fue")) {
         set2024Sthr("#2024fuesthr", mon.fuePoints);
@@ -479,8 +470,12 @@ function UpdateStatblock(moveSeparationPoint) {
     }
 
     //Initiative
-    let setIni = (id, pts) => $(id).html(StringFunctions.RemoveHtmlTags(StringFunctions.BonusFormat(MathFunctions.PointsToBonus(pts))) + " (" + (MathFunctions.PointsToBonus(pts) + 10) + ")");
-    setIni("#inipts", mon.desPoints);
+    /* let setIni = (id, pts) => $(id).html(StringFunctions.RemoveHtmlTags(StringFunctions.BonusFormat(MathFunctions.getIni())) + " (" + ((MathFunctions.getIni() + 10)) + ")");
+    console.log("mon points", mon.iniPoints);
+    setIni("#inipts", mon.desPoints, mon.iniPoints); */
+    $("#inipts").html(StringFunctions.RemoveHtmlTags(mon.iniPoints));
+
+
 
     let propertiesDisplayArr = StringFunctions.GetPropertiesDisplayArr();
 
@@ -494,25 +489,26 @@ function UpdateStatblock(moveSeparationPoint) {
     // Challenge Rating
     let crDisplay = CrFunctions.GetString();
     if (crDisplay && crDisplay.length > 0) {
-        $("#challenge-rating-line").show();
+        //$("#challenge-rating-line").show();
         $("#challenge-rating").html(StringFunctions.FormatString(StringFunctions.RemoveHtmlTags(crDisplay)));
         if (mon.cr == "*") {
-            $("#challenge-rating-2024").html(StringFunctions.FormatString(StringFunctions.RemoveHtmlTags(mon.customCr.trim()) + "; BC " + ("+" + StringFunctions.RemoveHtmlTags(CrFunctions.GetProf()))));
+            console.log(mon.customCr);
+            $("#challenge-rating-2024").html(StringFunctions.FormatString(StringFunctions.RemoveHtmlTags(crDisplay) + "; BC " + ("+" + StringFunctions.RemoveHtmlTags(CrFunctions.GetProf())) + ")"));
         } else {
             $("#challenge-rating-2024").html(StringFunctions.FormatString(StringFunctions.RemoveHtmlTags(mon.cr + " (" + data.crs[mon.cr].pe + " PE; BC " + ("+" + StringFunctions.RemoveHtmlTags(CrFunctions.GetProf()) + ")"))));
         }
-        $("#proficiency-bonus-line").show();
+        //$("#proficiency-bonus-line").show();
         $("#proficiency-bonus").html("+" + StringFunctions.RemoveHtmlTags(CrFunctions.GetProf()));
     }
     else {
-        $("#challenge-rating-line").hide();
-        $("#proficiency-bonus-line").hide();
+        //$("#challenge-rating-line").hide();
+        //$("#proficiency-bonus-line").hide();
     }
 
     // Abilities
     let traitsHTML = [];
 
-    if (mon.abilities.length > 0) AddToTraitList(traitsHTML, mon.abilities, "<h3 id='rasgos-2024'>Rasgos</h3>");
+    if (mon.abilities.length > 0) AddToTraitList(traitsHTML, mon.abilities, "<h3 id='rasgos-2024'>Atributos</h3>");
     if (mon.actions.length > 0) AddToTraitList(traitsHTML, mon.actions, "<h3>Acciones</h3>");
     if (mon.additionalactions.length > 0) AddToTraitList(traitsHTML, mon.additionalactions, "<h3>Acciones Adicionales</h3>");
     if (mon.reactions.length > 0) AddToTraitList(traitsHTML, mon.reactions, "<h3>Reacciones</h3>");
@@ -895,6 +891,9 @@ var FormFunctions = {
         $("#custom-hp-input").prop("checked", mon.customHP);
         this.ShowHideCustomHP();
 
+        // Initiative
+        $("#initiative-input").val(mon.iniPoints);
+
         // Speeds
         $("#speed-input").val(mon.speed);
         $("#burrow-speed-input").val(mon.burrowSpeed);
@@ -918,6 +917,7 @@ var FormFunctions = {
         // Senses
         $("#blindsight-input").val(mon.blindsight);
         $("#blindness-input").prop("checked", mon.blind);
+        $("#blindness-custom-input").prop("checked", mon.customblind);
         this.ShowHideBlindBox();
         $("#darkvision-input").val(mon.darkvision);
         $("#magic-darkness-input").prop("checked", mon.magicdarkness);
@@ -1396,9 +1396,12 @@ var GetVariablesFunctions = {
         mon.sabPoints = $("#sab-input").val();
         mon.carPoints = $("#car-input").val();
 
+        mon.iniPoints = $("#initiative-input").val();
+
         // Senses
         mon.blindsight = $("#blindsight-input").val();
         mon.blind = $("#blindness-input").prop("checked");
+        mon.customblind = $("#blindness-custom-input").prop("checked");
         mon.darkvision = $("#darkvision-input").val();
         mon.magicdarkness = $("#magic-darkness-input").prop("checked");
         mon.tremorsense = $("#tremorsense-input").val();
@@ -1462,6 +1465,8 @@ var GetVariablesFunctions = {
         mon.intPoints = preset.intelligence;
         mon.sabPoints = preset.wisdom;
         mon.carPoints = preset.charisma;
+
+        mon.iniPoints = preset.initiative;
 
         // CR
         mon.cr = preset.challenge_rating;
@@ -2013,18 +2018,18 @@ var StringFunctions = {
 
     GetSenses: function () {
         let sensesDisplayArr = [];
-        if (mon.blindsight > 0) sensesDisplayArr.push("visión ciega " + mon.blindsight + " pies" + (mon.blind ? " (ciego más allá de este radio)" : ""));
-        if (mon.darkvision > 0) sensesDisplayArr.push("visión en la oscuridad " + mon.darkvision + " pies" + (mon.magicdarkness ? " (penetra la oscuridad mágica)" : ""));
-        if (mon.tremorsense > 0) sensesDisplayArr.push("sentir vibraciones " + mon.tremorsense + " pies");
-        if (mon.truesight > 0) sensesDisplayArr.push("visión verdadera " + mon.truesight + " pies");
+        if (mon.blindsight > 0) sensesDisplayArr.push("Visión Ciega " + mon.blindsight + " pies" + (mon.blind ? " (ciego más allá de este radio)" : "") + (mon.customblind ? " (solo Centinela)" : ""));
+        if (mon.darkvision > 0) sensesDisplayArr.push("Visión en la Oscuridad " + mon.darkvision + " pies" + (mon.magicdarkness ? " (penetra la oscuridad mágica)" : ""));
+        if (mon.tremorsense > 0) sensesDisplayArr.push("Sentir Vibraciones " + mon.tremorsense + " pies");
+        if (mon.truesight > 0) sensesDisplayArr.push("Visión Verdadera " + mon.truesight + " pies");
 
         // Passive Perception
         let ppData = ArrayFunctions.FindInList(mon.skills, "percepción"),
             pp = 10 + MathFunctions.PointsToBonus(mon.sabPoints);
         if (ppData != null)
             pp += CrFunctions.GetProf() * (ppData.hasOwnProperty("note") ? 2 : 1);
-        sensesDisplayArr.push("Percepción pasiva " + pp);
-        return sensesDisplayArr.join(", ");
+        sensesDisplayArr.push("Percepción Pasiva " + pp);
+        return (sensesDisplayArr.join(", "));
     },
 
     GetPropertiesDisplayArr: function () {
@@ -2036,6 +2041,7 @@ var StringFunctions = {
             languageDisplayArr = [],
             vulnerableDisplayString = "",
             resistantDisplayString = "",
+            immunitiesDisplayString = "",
             immuneDisplayString = "";
 
         // Saving Throws
@@ -2068,11 +2074,14 @@ var StringFunctions = {
         }
         vulnerableDisplayString = StringFunctions.ConcatUnlessEmpty(vulnerableDisplayArr.join(", "), vulnerableDisplayArrSpecial.join("; "), "; ").toLowerCase();
         resistantDisplayString = StringFunctions.ConcatUnlessEmpty(resistantDisplayArr.join(", "), resistantDisplayArrSpecial.join("; "), "; ").toLowerCase();
-        immuneDisplayString = StringFunctions.ConcatUnlessEmpty(immuneDisplayArr.join(", "), immuneDisplayArrSpecial.join("; "), "; ").toLowerCase();
 
         // Condition Immunities
         for (let index = 0; index < mon.conditions.length; index++)
             conditionsDisplayArr.push(mon.conditions[index].name.toLowerCase());
+
+        immunitiesDisplayString = StringFunctions.ConcatUnlessEmpty(immuneDisplayArr.join(", "), immuneDisplayArrSpecial.join("; "), "; ", conditionsDisplayArr.join(", "), "; ").toLowerCase();
+        immunitiesDisplayString = StringFunctions.ConcatUnlessEmpty(_.upperFirst(immunitiesDisplayString), _.upperFirst(conditionsDisplayArr.join(", ")), "; ");
+        immuneDisplayString = StringFunctions.ConcatUnlessEmpty(immuneDisplayArr.join(", "), immuneDisplayArrSpecial.join("; "), "; ").toLowerCase();
 
         // Senses
         sensesDisplayString = StringFunctions.GetSenses();
@@ -2122,6 +2131,7 @@ var StringFunctions = {
         pushArr("Habilidades", skillsDisplayArr);
         pushArr("Vulnerabilidad a daño", vulnerableDisplayString);
         pushArr("Resistencia a daño", resistantDisplayString);
+        pushArr("Inmunidades", immunitiesDisplayString);
         pushArr("Inmunidad a daño", immuneDisplayString);
         pushArr("Inmunidad a estados", conditionsDisplayArr);
         pushArr("Sentidos", sensesDisplayString);
@@ -2178,7 +2188,7 @@ var StringFunctions = {
         if (property.arr.length == 0) return "";
         let htmlClass = firstLine ? "property-line first" : "property-line",
             arr = Array.isArray(property.arr) ? property.arr.join(", ") : property.arr;
-        return "<div class=\"" + htmlClass + "\"><div><h4>" + StringFunctions.RemoveHtmlTags(property.name) + "</h4> <p>" + StringFunctions.RemoveHtmlTags(this.FormatString(arr, false)) + "</p></div></div><!-- property line -->"
+        return "<div class=\"" + htmlClass + ' ' + _.camelCase(property.name) + "\"><div><h4>" + StringFunctions.RemoveHtmlTags(property.name) + "</h4> <p>" + StringFunctions.RemoveHtmlTags(this.FormatString(arr, false)) + "</p></div></div><!-- property line -->"
     },
 
     MakeTraitHTML: function (name, description) {
@@ -2261,8 +2271,10 @@ var CrFunctions = {
     },
 
     GetString: function () {
-        if (mon.cr == "*")
+        if (mon.cr == "*") {
+            console.log("trim", mon.customCr)
             return mon.customCr.trim();
+        }
         return mon.cr + " (" + data.crs[mon.cr].pe + " PE)"
     }
 }

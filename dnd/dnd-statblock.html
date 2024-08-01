@@ -21,6 +21,7 @@
     <script src="js/FileSaver.min.js"></script>
     <script src="js/dom-to-image.min.js"></script>
     <script src="js/statblock-script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.10/lodash.min.js"></script>
 
 </head>
 
@@ -142,11 +143,6 @@
                                 </div>
                                 <div class="scores-line-2024">
                                     <div class="scores-characteristic-2024">
-                                        <div class="scores-titles-wrapper">
-
-                                            <p>MOD</p>
-                                            <p>SAVE</p>
-                                        </div>
                                         <div class="scores-pnts-wrapper">
 
                                             <div class="scores-pnts-2024 second-line-2024">
@@ -160,11 +156,6 @@
                                         </div>
                                     </div>
                                     <div class="scores-characteristic-2024">
-                                        <div class="scores-titles-wrapper">
-
-                                            <p>MOD</p>
-                                            <p>SAVE</p>
-                                        </div>
                                         <div class="scores-pnts-wrapper">
 
                                             <div class="scores-pnts-2024 second-line-2024">
@@ -178,11 +169,6 @@
                                         </div>
                                     </div>
                                     <div class="scores-characteristic-2024">
-                                        <div class="scores-titles-wrapper">
-
-                                            <p>MOD</p>
-                                            <p>SAVE</p>
-                                        </div>
                                         <div class="scores-pnts-wrapper">
 
                                             <div class="scores-pnts-2024 second-line-2024">
@@ -264,7 +250,7 @@
                             name="columns-input" value="2col"> Dos Columnas</label>
                 </form>
                 <button id="left-separator-button" type="button" onclick="UpdateBlockFromVariables(1)">&lt;&lt;</button>
-                <button type="button" onclick="UpdateBlockFromVariables(0)">Update Statblock</button>
+                <button type="button" onclick="UpdateBlockFromVariables(0)">Actualizar Perfil</button>
                 <button id="right-separator-button" type="button" onclick="UpdateBlockFromVariables(-1)">>></button>
                 <br>
                 <br>
@@ -377,6 +363,11 @@
                                 <label for="otherarmor-input">Descripción: <input id="otherarmor-input" type="text"
                                         value="10 (armadura)"></label><br>
                                 <div id="otherarmor-box-note" class="box-note"><i>Use _ to italicize</i></div>
+                            </div>
+                        </td>
+                        <td>
+                            <div id="initiative-input-prompt"><label for="initiative-input">Modificador iniciativa
+                                    <br><input type="text" id="initiative-input" value="+1 (11)"></label>
                             </div>
                         </td>
                     </tr>
@@ -726,7 +717,7 @@
                             defecto</button></div>
                 </div>
                 <br>
-                <b>Rasgos:</b>
+                <b>Atributos:</b>
                 <div><label for="abilities-name-input" style="width: 100%;">Name: <input id="abilities-name-input"
                             type="text" value="" style="margin-right: 40px; width: 30%;"></label></div>
                 <div><textarea id="abilities-desc-input" style="height: 10em;"></textarea></div>

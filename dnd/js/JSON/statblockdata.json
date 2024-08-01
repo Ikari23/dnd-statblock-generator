@@ -548,7 +548,7 @@
 		{
 			"name": "Resistencia Legendaria",
 			"realname": "Resistencia Legendaria (3/día)",
-			"desc": "El [MON] puede elegir tener éxito en una tirada de salvación que haya fallado."
+			"desc": "Si el [MON] falla una tirada de salvación, puede elegir tener éxito en su lugar."
 		},
 		{
 			"name": "Lanzamiento de Conjuros (INT)",
@@ -642,7 +642,7 @@
 		},
 		{
 			"name": "Anfibio",
-			"desc": "El [MON] puede respirar tanto dentro del agua como fuera de ella."
+			"desc": "El [MON] puede respirar tanto agua como aire."
 		},
 		{
 			"name": "Apariencia Falsa",
@@ -1090,6 +1090,10 @@
 		{
 			"name": "Percepción Divina",
 			"desc": "El [MON] reconoce cualquier mentira que escuche."
+		},
+		{
+			"name": "Preparado para el Combate",
+			"desc": "El [MON] tiene Ventaja en las tiradas de Iniciativa."
 		},
 		{
 			"name": "Prerrogativa Divina",
